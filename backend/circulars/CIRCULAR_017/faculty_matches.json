@@ -1,0 +1,32 @@
+[
+  {
+    "original_reference": "Venkatachala V",
+    "standard_name": "Venkatachala V",
+    "faculty_id": "FAC022",
+    "department": "Unknown",
+    "email": "venkatachalavenku029@gmail.com",
+    "similarity_score": 1.0,
+    "matching_explanation": "Exact match with standard name and alias 'V. Venkatachala'.",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "MANUALLY_CONFIRMED",
+    "is_verified": true,
+    "manual_override": true
+  },
+  {
+    "original_reference": "Vijay Pail",
+    "standard_name": "Vijay Patil",
+    "faculty_id": "FAC021",
+    "department": "Computer Science & Engineering",
+    "email": "vijaypatil00046@gmail.com",
+    "similarity_score": 0.9524,
+    "matching_explanation": "OCR typo 'Pail' resolved to 'Patil'. High embedding similarity (0.9524) confirms match with FAC021.",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "MANUALLY_CONFIRMED",
+    "is_verified": true,
+    "manual_override": true
+  }
+]

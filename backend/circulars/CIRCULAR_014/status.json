@@ -1,0 +1,18 @@
+{
+  "circular_id": "CIRCULAR_014",
+  "filename": "haand-02.jpeg",
+  "file_type": "jpeg",
+  "file_size_bytes": 66106,
+  "page_count": 1,
+  "current_state": "COMPLETED",
+  "created_at": "2026-11-17T22:48:53.561558",
+  "updated_at": "2026-11-17T22:50:18.033967",
+  "error_message": "Manually marked as resolved by user.",
+  "summary": "All CRs are instructed to be present on time without fail at Hop's office. The circular lists Zaid, Vijay Patil, and Venkata chala as specific recipients or attendees. No specific date or time is provided in the text, only the time 'a2:00M' which appears to be a typo or specific local notation.",
+  "has_extracted_text": true,
+  "matches_count": 3,
+  "verified_matches_count": 3,
+  "pending_review_count": 0,
+  "emails_sent_count": 0,
+  "emails_failed_count": 0
+}

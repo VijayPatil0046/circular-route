@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { 
   FileText, 
   Send, 
@@ -9,24 +9,23 @@ import {
   XCircle,
   Upload,
   RefreshCw,
-  ExternalLink
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight
 } from 'lucide-react';
+
+const CIRCULARS_PER_PAGE = 10;
 
 export default function Dashboard({ 
   stats, 
+  circulars = [],
   loading, 
   onRefresh, 
   onSelectCircular, 
   onNavigateToUpload,
   onDismissCircular
 }) {
-  if (loading && !stats) {
-    return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <RefreshCw className="h-8 w-8 text-indigo-600 animate-spin" />
-      </div>
-    );
-  }
+  const [currentPage, setCurrentPage] = useState(1);
 
   const {
     total_circulars = 0,
@@ -36,6 +35,27 @@ export default function Dashboard({
     active_unresolved_circular = null,
     recent_circulars = []
   } = stats || {};
+
+  const circularList = circulars.length > 0 ? circulars : recent_circulars;
+  const totalPages = Math.max(1, Math.ceil(circularList.length / CIRCULARS_PER_PAGE));
+  const pageStart = (currentPage - 1) * CIRCULARS_PER_PAGE;
+  const pageCirculars = circularList.slice(pageStart, pageStart + CIRCULARS_PER_PAGE);
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [circularList.length]);
+
+  useEffect(() => {
+    if (currentPage > totalPages) setCurrentPage(totalPages);
+  }, [currentPage, totalPages]);
+
+  if (loading && !stats) {
+    return (
+      <div className="flex items-center justify-center min-h-[400px]">
+        <RefreshCw className="h-8 w-8 text-indigo-600 animate-spin" />
+      </div>
+    );
+  }
 
   return (
     <div className="space-y-6">
@@ -184,10 +204,10 @@ export default function Dashboard({
       <div className="bg-white rounded-xl border border-slate-200 shadow-sm overflow-hidden">
         <div className="px-5 py-4 border-b border-slate-200 flex items-center justify-between">
           <h2 className="text-base font-semibold text-slate-900">Recently Processed Circulars</h2>
-          <span className="text-xs text-slate-500">{recent_circulars.length} loaded</span>
+          <span className="text-xs text-slate-500">{circularList.length} total</span>
         </div>
 
-        {recent_circulars.length === 0 ? (
+        {circularList.length === 0 ? (
           <div className="p-8 text-center">
             <FileText className="h-10 w-10 text-slate-300 mx-auto mb-3" />
             <h3 className="text-sm font-medium text-slate-700">No circulars processed yet</h3>
@@ -216,7 +236,7 @@ export default function Dashboard({
                 </tr>
               </thead>
               <tbody className="divide-y divide-slate-100">
-                {recent_circulars.map((circ) => {
+                {pageCirculars.map((circ) => {
                   return (
                     <tr key={circ.circular_id} className="hover:bg-slate-50/70 transition-colors">
                       <td className="px-5 py-3.5 font-semibold text-slate-900 font-mono text-xs">
@@ -259,6 +279,37 @@ export default function Dashboard({
                 })}
               </tbody>
             </table>
+          </div>
+        )}
+
+        {circularList.length > 0 && (
+          <div className="flex flex-col sm:flex-row items-center justify-between gap-3 border-t border-slate-200 px-5 py-3">
+            <p className="text-xs text-slate-500">
+              Showing {pageStart + 1}–{Math.min(pageStart + CIRCULARS_PER_PAGE, circularList.length)} of {circularList.length} circulars
+            </p>
+            <div className="flex items-center gap-2">
+              <button
+                type="button"
+                onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+                disabled={currentPage === 1}
+                className="inline-flex items-center gap-1 rounded-md border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                <ChevronLeft className="h-3.5 w-3.5" />
+                Previous
+              </button>
+              <span className="min-w-[5rem] text-center text-xs text-slate-600">
+                Page {currentPage} of {totalPages}
+              </span>
+              <button
+                type="button"
+                onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+                disabled={currentPage === totalPages}
+                className="inline-flex items-center gap-1 rounded-md border border-slate-200 px-3 py-1.5 text-xs font-medium text-slate-700 hover:bg-slate-50 disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Next
+                <ChevronRight className="h-3.5 w-3.5" />
+              </button>
+            </div>
           </div>
         )}
       </div>

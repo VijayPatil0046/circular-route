@@ -1,0 +1,18 @@
+{
+  "circular_id": "CIRCULAR_015",
+  "filename": "haand-02.jpeg",
+  "file_type": "jpeg",
+  "file_size_bytes": 203063,
+  "page_count": 1,
+  "current_state": "COMPLETED",
+  "created_at": "2026-11-17T22:50:28.042640",
+  "updated_at": "2026-11-17T22:52:56.353457",
+  "error_message": "Manually marked as resolved by user.",
+  "summary": "All Class Representatives (CRs) are instructed to be present on time at Hop's office at 2:00 PM. The circular is circulated to Vijay Patil and Venkata chalaU for information.",
+  "has_extracted_text": true,
+  "matches_count": 2,
+  "verified_matches_count": 2,
+  "pending_review_count": 0,
+  "emails_sent_count": 0,
+  "emails_failed_count": 0
+}

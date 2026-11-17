@@ -1,0 +1,26 @@
+[
+  {
+    "recipient_id": "REC_b2b5090e",
+    "faculty_id": "FAC022",
+    "standard_name": "Venkatachala V",
+    "email": "venkatachalavenku029@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ea93-812b-7d7b-8353-bc6363aa76ee",
+    "sent_at": "2026-11-17T23:04:58.297605",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_017_FAC022_6f0270"
+  },
+  {
+    "recipient_id": "REC_49360c6a",
+    "faculty_id": "FAC021",
+    "standard_name": "Vijay Patil",
+    "email": "vijaypatil00046@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ea93-7bab-713a-be9e-2c39b4b1abd5",
+    "sent_at": "2026-11-17T23:04:56.941462",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_017_FAC021_9787b9"
+  }
+]

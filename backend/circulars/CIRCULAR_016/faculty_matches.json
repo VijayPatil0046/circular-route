@@ -1,0 +1,47 @@
+[
+  {
+    "original_reference": "Zaid",
+    "standard_name": "Zaid",
+    "faculty_id": "FAC026",
+    "department": "Unknown",
+    "email": "vijaypatil00046@gmail.com",
+    "similarity_score": 1.0,
+    "matching_explanation": "Exact match with standard name and alias 'Zaid' with perfect embedding similarity.",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "Vijcy Patil",
+    "standard_name": "Vijay Patil",
+    "faculty_id": "FAC021",
+    "department": "Computer Science & Engineering",
+    "email": "vijaypatil00046@gmail.com",
+    "similarity_score": 0.95,
+    "matching_explanation": "OCR typo 'Vijcy' resolved to 'Vijay'. Matches standard name 'Vijay Patil' (FAC021) with high similarity (0.9091). Distinguished from 'Vijay V Patil' (FAC023) due to higher similarity score and exact surname match without middle initial.",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "WenkatachalaV",
+    "standard_name": "Venkatachala V",
+    "faculty_id": "FAC022",
+    "department": "Unknown",
+    "email": "venkatachalavenku029@gmail.com",
+    "similarity_score": 0.92,
+    "matching_explanation": "OCR typo 'Wenkatachala' resolved to 'Venkatachala'. Matches standard name 'Venkatachala V' (FAC022) with high similarity (0.8889).",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  }
+]

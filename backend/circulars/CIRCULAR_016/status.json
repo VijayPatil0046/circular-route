@@ -1,0 +1,18 @@
+{
+  "circular_id": "CIRCULAR_016",
+  "filename": "hand=03.jpeg",
+  "file_type": "jpeg",
+  "file_size_bytes": 104213,
+  "page_count": 1,
+  "current_state": "COMPLETED",
+  "created_at": "2026-11-17T22:54:42.258727",
+  "updated_at": "2026-11-17T22:55:33.784583",
+  "error_message": null,
+  "summary": "The circular is a handwritten note dated 18-11-2026 addressed to the Head of Department (HoD) and specific faculty members. It serves to inform Zaid, Vijcy Patil, and WenkatachalaV about a matter, though the specific details of the information are not legible in the provided text.",
+  "has_extracted_text": true,
+  "matches_count": 3,
+  "verified_matches_count": 3,
+  "pending_review_count": 0,
+  "emails_sent_count": 3,
+  "emails_failed_count": 0
+}

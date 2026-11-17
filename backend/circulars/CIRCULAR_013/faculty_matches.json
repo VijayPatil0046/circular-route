@@ -1,0 +1,47 @@
+[
+  {
+    "original_reference": "Zaid",
+    "standard_name": "Zaid",
+    "faculty_id": "FAC026",
+    "department": "Unknown",
+    "email": "vijaypatil00046@gmail.com",
+    "similarity_score": 1.0,
+    "matching_explanation": "Exact match with standard name 'Zaid' in the faculty directory.",
+    "supporting_evidence": "Found in To section.",
+    "relevance_explanation": "Designated recipient in To section.",
+    "section_found": "To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "Vijay Patil",
+    "standard_name": "Vijay Patil",
+    "faculty_id": "FAC021",
+    "department": "Computer Science & Engineering",
+    "email": "vijaypatil00046@gmail.com",
+    "similarity_score": 1.0,
+    "matching_explanation": "Exact match with standard name 'Vijay Patil' (FAC021). Distinguished from 'Vijay V Patil' (FAC023) based on exact string match and higher similarity score.",
+    "supporting_evidence": "Found in To section.",
+    "relevance_explanation": "Designated recipient in To section.",
+    "section_found": "To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "Venkata chala",
+    "standard_name": "Venkatachala V",
+    "faculty_id": "FAC022",
+    "department": "Unknown",
+    "email": "venkatachalavenku029@gmail.com",
+    "similarity_score": 0.96,
+    "matching_explanation": "OCR/typo resolution: 'Venkata chala' is a split/misspelling of 'Venkatachala'. Matches alias 'Venkatachala' for FAC022.",
+    "supporting_evidence": "Found in To section.",
+    "relevance_explanation": "Designated recipient in To section.",
+    "section_found": "To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  }
+]

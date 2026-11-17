@@ -1,0 +1,45 @@
+--- PAGE 1 OF 1 ---
+Word2Vee is a Nanural Language Processing (NLP) technique used to convert words into
+1.Introduction
+numerical vectors (word embeddings) that capture semantic and contextual relationships
+beneenwordsUnlike traditional textrepresentation techniques suchasBagofWords andTF-
+IDF.Word2Vecleams densevector representations by analyzing the context in which words
+In this experimenta customWord2Vee model was trained using a domain-specificmedical
+appear.
+corpus collected from Wikipedia medical articles.The objectivewas to understand how word
+embeddingscapurrlationhipweenmedial trmssuhasdiseasesrugsrganan
+diagnostic procedures.
+Two Word2Vec architectures,Skip-Gram and Continuous Bag of Words (CBOW).were
+trainedandevauatdheiormancewaanalyzeduinearesteighbor similarityword
+analogielstoheionamanrankrrlationandvisualiatn
+This experiment demonstrates how domain-specific training enables a model to learn
+meaningful relationships within a specialized field such as healthcare andmedicine.
+2.Objective
+Train a custom Word2Vecmodel on a small dataset. Train embeddings on a domainspecific
+corpus (e.g legal. medical) and analyze how embeddings capture domainspecific semantics.
+3.Tools and Technologies
+Tool/Technology
+Purpose
+Python
+Main programming language
+Gensim
+Word2Vecmodel training and embeddinggeneration
+NumPy
+Numerical computations and vector operations
+Scikit-learm
+t-SNE dimensionality reduction
+Matplotlib
+Visualization ofword embeddings
+SciPy
+Spearman rank correlation calculation
+Requests
+Downloadingmedical articlesfrom Wikipedia
+Text cleaning and tokenization
+Regular Expressions (re)
+vs Code
+Development environment
+4.Methodology
+The implementationfollowsasequenceof stepsstartingfrommedical corpuscollectionand
+ending with semantic evaluation and visualization.
+Copi  to
+Venkatachala V,Vijay Pail

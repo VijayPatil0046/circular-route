@@ -207,6 +207,7 @@ export default function App() {
         {activeTab === 'dashboard' && (
           <Dashboard
             stats={dashboardStats}
+            circulars={circulars}
             loading={loading}
             onRefresh={loadInitialData}
             onSelectCircular={handleSelectCircular}
