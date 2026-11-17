@@ -204,7 +204,7 @@ class FacultyService:
         Two-stage LLM processing pipeline:
         Stage 1 (LLM Call 1):
             Input: Full circular text from OCR.
-            Output: Extracted 'To' and 'Copy To' sections, raw candidate names, and 2-3 line summary.
+            Output: Extracted 'To' and 'Copy To' sections and raw candidate names.
         Embedding Retrieval:
             Input: Extracted recipient names from Stage 1.
             Retrieval: In-memory sentence-transformers (all-MiniLM-L6-v2) embedding & similarity search.
@@ -228,7 +228,7 @@ class FacultyService:
         # ---------------------------------------------------------
         if llm_available:
             try:
-                logger.info("Executing LLM Call 1: Extracting 'To' / 'Copy To' recipient sections & summary from full circular text...")
+                logger.info("Executing LLM Call 1: Extracting 'To' / 'Copy To' recipient sections...")
                 extracted_candidates, sections_info, llm_summary = self._call_groq_stage1_extract_recipients(document_text)
             except Exception as e:
                 logger.error(f"Error in LLM Call 1 ({e}). Falling back to local regex extraction.")
@@ -336,13 +336,12 @@ class FacultyService:
         Responds back with:
         - The 'To:' and/or 'Copy To:' sections
         - Extracted individual recipient candidate names
-        - Concise 2-3 line executive summary
         """
         from groq import Groq
         client = Groq(api_key=settings.GROQ_API_KEY)
 
         prompt = f"""You are Stage 1 of an institutional circular processing system.
-Read the full circular text and extract the recipient sections and a concise summary.
+Read the full circular text and extract the recipient sections and their names.
 
 INSTRUCTIONS:
 1. Identify the 'To:' and 'Copy To:' / 'Circulate To:' recipient sections located in the circular.
@@ -350,7 +349,7 @@ INSTRUCTIONS:
    - Separate multiple names in a single line (e.g. if comma-separated or numbered).
    - Ignore purely administrative generic offices (like 'Principal', 'Registrar', 'Notice Board', 'Accounts Section', 'Office Copy') unless an individual person's name is attached.
    - Do NOT extract people mentioned only in the body text as guest speakers or event coordinators unless they are designated in 'To' or 'Copy To'.
-3. Write a concise 2 to 3 sentence executive summary of the circular explaining what it is about, faculty action required, and key dates/deadlines.
+3. Preserve each name as written and do not add people from the circular body.
 
 FULL CIRCULAR TEXT:
 {document_text[:3500]}
@@ -364,8 +363,7 @@ Respond ONLY in valid JSON matching this schema:
       "extracted_name": "<exact name as appeared in document>",
       "section": "<To or Copy To>"
     }}
-  ],
-  "summary": "<concise 2-3 line executive summary>"
+  ]
 }}"""
 
         response = client.chat.completions.create(
@@ -399,9 +397,7 @@ Respond ONLY in valid JSON matching this schema:
             "copy_to_section": data.get("copy_to_section", ""),
             "has_recipient_section": bool(candidates or data.get("to_section") or data.get("copy_to_section"))
         }
-        summary = data.get("summary")
-
-        return candidates, sections, summary
+        return candidates, sections, None
 
     def _call_groq_stage2_resolve_faculty(
         self,

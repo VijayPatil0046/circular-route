@@ -4,8 +4,14 @@ from pathlib import Path
 from typing import Optional, List
 
 from ..core.config import settings
+from ..utils.text_normalizer import compute_name_token_similarity
 
 logger = logging.getLogger(__name__)
+
+COPY_SECTION_HEADER = re.compile(
+    r'^\s*(?:copy\s*to|c\.?\s*c\.?|cc|circulate\s*to|distribution\s+list)\b',
+    re.IGNORECASE
+)
 
 class SummaryService:
     def generate_summary(self, circular_text: str, recipients: Optional[List[str]] = None) -> str:
@@ -19,30 +25,55 @@ class SummaryService:
         if not circular_text or not circular_text.strip():
             return "No content available in circular for summary generation."
 
+        summary_text = self._prepare_summary_text(circular_text, recipients or [])
+        if not summary_text.strip():
+            return "No non-recipient circular content was available to summarize."
+
         if settings.GROQ_API_KEY:
             try:
-                return self._call_groq_summary(circular_text, recipients)
+                return self._call_groq_summary(summary_text)
             except Exception as e:
                 logger.error(f"Error calling Groq for summary: {e}. Falling back to extractive summary.")
 
-        return self._fallback_extractive_summary(circular_text)
+        return self._fallback_extractive_summary(summary_text)
 
-    def _call_groq_summary(self, circular_text: str, recipients: Optional[List[str]] = None) -> str:
+    def _prepare_summary_text(self, circular_text: str, recipients: List[str]) -> str:
+        """Remove the trailing distribution block and recipient-only OCR lines."""
+        lines = []
+        for line in circular_text.splitlines():
+            if COPY_SECTION_HEADER.match(line):
+                break
+            if recipients and self._is_recipient_list_line(line, recipients):
+                continue
+            lines.append(line)
+        return "\n".join(lines).strip()
+
+    def _is_recipient_list_line(self, line: str, recipients: List[str]) -> bool:
+        parts = [part.strip(" \t.:;,-") for part in re.split(r"[,;|&]|\band\b", line, flags=re.IGNORECASE)]
+        parts = [re.sub(r"^\s*(?:\d+[.)]|[-*•])\s*", "", part).strip() for part in parts]
+        parts = [part for part in parts if part]
+        if not parts:
+            return False
+
+        return all(
+            max((compute_name_token_similarity(part, name) for name in recipients), default=0.0) >= 0.80
+            for part in parts
+        )
+
+    def _call_groq_summary(self, circular_text: str) -> str:
         from groq import Groq
         client = Groq(api_key=settings.GROQ_API_KEY)
 
-        recipient_context = ""
-        if recipients:
-            recipient_context = f"\nAddressed Recipients: {', '.join(recipients)}"
-
-        prompt = f"""You are an institutional circular summarizer. 
-Write a concise 2-3 line summary of the following circular.{recipient_context}
+        prompt = f"""You are an institutional circular summarizer.
+Write a concise, specific summary of the circular content below.
 
 REQUIREMENTS:
 1. The summary MUST be exactly 2 to 3 sentences / lines.
-2. Clearly explain what the circular is about, key actions/instructions required from faculty, and any specific deadlines or dates.
-3. Base your summary STRICTLY on the extracted text below. DO NOT invent dates, names, or responsibilities.
-4. Keep the tone professional, objective, and executive.
+2. State the actual purpose or event, required action, and dates, times, or venue when present.
+3. Do not mention, list, or summarize the To, Copy To, CC, or distribution-list sections or any recipient names.
+4. Base the summary STRICTLY on the supplied text. Do not infer missing details or describe OCR uncertainty as circular content.
+5. If a detail is unclear in the text, omit it rather than guessing.
+6. Keep the tone professional and objective.
 
 CIRCULAR TEXT:
 {circular_text[:3500]}
@@ -69,7 +100,7 @@ Concise Summary:"""
         Extractive heuristic summary if LLM is unavailable:
         Extracts subject, dates, and action lines.
         """
-        lines = [l.strip() for l in text.splitlines() if l.strip()]
+        lines = [l.strip() for l in text.splitlines() if l.strip() and not l.startswith("--- PAGE")]
         subject_line = ""
         dates = []
         action_lines = []
@@ -81,7 +112,9 @@ Concise Summary:"""
                 subject_line = line
             if date_pattern.search(line):
                 dates.append(line)
-            if any(k in line.lower() for k in ["requested to", "directed to", "submit", "deadline", "meeting", "attend", "hereby informed"]):
+            if any(k in line.lower() for k in ["requested to", "directed to", "instructed", "required to", "submit", "deadline", "meeting", "attend", "hereby informed"]):
+                action_lines.append(line)
+            if re.match(r'^(?:venue|location)\s*[:\-]', line, re.IGNORECASE):
                 action_lines.append(line)
 
         summary_parts = []

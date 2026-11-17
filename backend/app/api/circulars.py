@@ -57,15 +57,12 @@ def execute_circular_pipeline(circular_id: str):
 
         # Stage 2: Faculty Identification & 2-Stage LLM Resolution
         storage_service.update_state(circular_id, ProcessingState.IDENTIFYING_FACULTY)
-        matches, requires_review, llm_summary = faculty_service.resolve_faculty(extracted_text)
+        matches, requires_review, _ = faculty_service.resolve_faculty(extracted_text)
         storage_service.save_faculty_matches(circular_id, [m.model_dump() for m in matches])
 
-        # Stage 3: Summary (from LLM Call 1 or local fallback)
-        if llm_summary:
-            summary = llm_summary
-        else:
-            verified_names = [m.standard_name for m in matches if m.is_verified]
-            summary = summary_service.generate_summary(extracted_text, verified_names)
+        # Stage 3: Summarize circular content separately from recipient extraction.
+        verified_names = [m.standard_name for m in matches if m.is_verified]
+        summary = summary_service.generate_summary(extracted_text, verified_names)
             
         storage_service.save_summary(circular_id, summary)
 

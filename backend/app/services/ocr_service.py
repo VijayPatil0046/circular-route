@@ -149,6 +149,7 @@ class OCRService:
         """Runs PP-OCR and TrOCR on the image and orchestrates results."""
         self._ensure_models_initialized()
         extracted_lines = []
+        ocr_scores = []
 
         # 1. Run PP-OCR (PaddleOCR / RapidOCR)
         if self.rapid_ocr:
@@ -160,9 +161,11 @@ class OCRService:
                     # Each item: [box, text, score]
                     sorted_res = sorted(results, key=lambda x: (int(min(p[1] for p in x[0]) / 18), min(p[0] for p in x[0])))
                     for box, text, score in sorted_res:
+                        score = float(score)
+                        ocr_scores.append(score)
                         clean_text = text.strip()
                         # If low confidence and looks handwritten, optionally refine with TrOCR
-                        if float(score) < 0.65 and self.trocr_model and self.trocr_processor:
+                        if score < 0.65 and self.trocr_model and self.trocr_processor:
                             crop = self._crop_box(image, box)
                             if crop is not None and crop.size > 0:
                                 h_text = self._run_trocr_on_crop(crop)
@@ -173,16 +176,45 @@ class OCRService:
             except Exception as e:
                 logger.error(f"Error in PP-OCR recognition: {e}")
 
-        # 2. If PP-OCR produced no lines or not available, use TrOCR line segmentation
-        if not extracted_lines and self.trocr_model and self.trocr_processor:
+        # 2. RapidOCR can miss entire handwritten lines while still returning
+        # some text. Run a segmented page-level TrOCR pass for sparse or weak OCR.
+        rapid_text = "\n".join(extracted_lines)
+        rapid_char_count = len(re.sub(r"\s", "", rapid_text))
+        mean_ocr_score = sum(ocr_scores) / len(ocr_scores) if ocr_scores else 0.0
+        needs_trocr_pass = (
+            not extracted_lines
+            or len(extracted_lines) <= 4
+            or rapid_char_count < 160
+            or (bool(ocr_scores) and mean_ocr_score < 0.78)
+        )
+        if needs_trocr_pass and self.trocr_model and self.trocr_processor:
             try:
                 line_crops = segment_handwritten_lines(image)
+                trocr_lines = []
                 for crop in line_crops:
                     txt = self._run_trocr_on_crop(crop)
                     if txt:
-                        extracted_lines.append(txt)
+                        trocr_lines.append(txt)
+
+                trocr_text = "\n".join(trocr_lines)
+                trocr_char_count = len(re.sub(r"\s", "", trocr_text))
+                if trocr_text and (
+                    not rapid_text
+                    or trocr_char_count >= max(rapid_char_count + 25, int(rapid_char_count * 1.15))
+                    or (bool(ocr_scores) and mean_ocr_score < 0.55)
+                ):
+                    logger.info(
+                        "Using page-level TrOCR recovery (%s chars vs %s RapidOCR chars).",
+                        trocr_char_count,
+                        rapid_char_count
+                    )
+                    extracted_lines = trocr_lines
             except Exception as e:
                 logger.error(f"Error running TrOCR segmenter fallback: {e}")
+        elif needs_trocr_pass:
+            logger.warning(
+                "Sparse or low-confidence OCR detected, but TrOCR is unavailable for handwritten recovery."
+            )
 
         return "\n".join(extracted_lines)
 

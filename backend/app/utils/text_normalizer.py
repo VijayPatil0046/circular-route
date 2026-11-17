@@ -116,7 +116,10 @@ def extract_recipient_sections(text: str) -> dict:
     
     # Regex markers
     to_pattern = re.compile(r'^\s*(?:to\s*[:\-]|addressed\s+to\s*[:\-])', re.IGNORECASE)
-    copy_to_pattern = re.compile(r'^\s*(?:copy\s+to\s*[:\-]|c\.?c\.?\s*[:\-])', re.IGNORECASE)
+    copy_to_pattern = re.compile(
+        r'^\s*(?:copy\s+to|c\.?c\.?)\s*(?:[:\-.,]\s*|$)',
+        re.IGNORECASE
+    )
     end_pattern = re.compile(r'^\s*(?:subject|sub\s*[:\-]|ref\s*[:\-]|dated|date\s*[:\-]|from\s*[:\-])', re.IGNORECASE)
     
     for line in lines:
@@ -168,7 +171,7 @@ def extract_recipient_sections(text: str) -> dict:
             to_block = to_match.group(1).strip()
             to_lines = [l.strip() for l in to_block.splitlines() if l.strip()]
             
-        copy_match = re.search(r'(?:^|\n)\s*(?:Copy\s+To|C\.?C\.?)\s*[:\-]\s*(.*?)(?=\n\s*(?:Subject|Sub|Ref|Dated|From|Sign|\n\n\n)|$)', text, re.IGNORECASE | re.DOTALL)
+        copy_match = re.search(r'(?:^|\n)\s*(?:Copy\s+To|C\.?C\.?)\s*[:\-.,]\s*(.*?)(?=\n\s*(?:Subject|Sub|Ref|Dated|From|Sign|\n\n\n)|$)', text, re.IGNORECASE | re.DOTALL)
         if copy_match:
             copy_block = copy_match.group(1).strip()
             copy_lines = [l.strip() for l in copy_block.splitlines() if l.strip()]
