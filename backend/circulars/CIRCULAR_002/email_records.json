@@ -1,0 +1,38 @@
+[
+  {
+    "recipient_id": "REC_a662ffb7",
+    "faculty_id": "FAC021",
+    "standard_name": "Vijay Patil",
+    "email": "vijaypatil00046@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1e9ea-e67f-706b-8fc1-0fe4e97f7068",
+    "sent_at": "2026-11-17T20:00:50.614683",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_002_FAC021_5dd57e"
+  },
+  {
+    "recipient_id": "REC_206ab4f1",
+    "faculty_id": "FAC022",
+    "standard_name": "Venkatachala V",
+    "email": "venkatachalavenku029@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1e9ea-f3ad-7f3c-898e-ecdeb7181d51",
+    "sent_at": "2026-11-17T20:00:54.198108",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_002_FAC022_0b5319"
+  },
+  {
+    "recipient_id": "REC_71d5f1e1",
+    "faculty_id": "FAC025",
+    "standard_name": "Kiran S",
+    "email": "vijayvpatil13@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1e9eb-047a-795d-b8c7-e44114a93c5c",
+    "sent_at": "2026-11-17T20:00:59.328948",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_002_FAC025_716b8f"
+  }
+]

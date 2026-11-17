@@ -1,0 +1,18 @@
+{
+  "circular_id": "CIRCULAR_004",
+  "filename": "cccircular ---01.png",
+  "file_type": "png",
+  "file_size_bytes": 1497977,
+  "page_count": 1,
+  "current_state": "COMPLETED",
+  "created_at": "2026-11-17T21:12:43.000604",
+  "updated_at": "2026-11-17T21:18:32.689394",
+  "error_message": "Manually marked as resolved by user.",
+  "summary": null,
+  "has_extracted_text": true,
+  "matches_count": 0,
+  "verified_matches_count": 0,
+  "pending_review_count": 0,
+  "emails_sent_count": 0,
+  "emails_failed_count": 0
+}

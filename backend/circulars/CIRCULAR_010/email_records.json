@@ -1,0 +1,62 @@
+[
+  {
+    "recipient_id": "REC_8c28f7df",
+    "faculty_id": "FAC021",
+    "standard_name": "Vijay Patil",
+    "email": "vijaypatil00046@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ea6b-a025-7a70-a251-d504771aad49",
+    "sent_at": "2026-11-17T22:21:42.985630",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_010_FAC021_497973"
+  },
+  {
+    "recipient_id": "REC_aedf01aa",
+    "faculty_id": "FAC022",
+    "standard_name": "Venkatachala V",
+    "email": "venkatachalavenku029@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ea6b-fd89-7c79-976d-2c25e50c4c5a",
+    "sent_at": "2026-11-17T22:22:05.209421",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_010_FAC022_f7feaf"
+  },
+  {
+    "recipient_id": "REC_18988fa8",
+    "faculty_id": "FAC024",
+    "standard_name": "Suresh Kumar P",
+    "email": "vijaykumarlkonapur@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ea6c-5225-77e8-b519-ec301abbc2aa",
+    "sent_at": "2026-11-17T22:22:39.705711",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_010_FAC024_c73055"
+  },
+  {
+    "recipient_id": "REC_a48c37ac",
+    "faculty_id": "FAC025",
+    "standard_name": "Kiran S",
+    "email": "vijayvpatil13@gmail.com",
+    "status": "SENDING",
+    "resend_message_id": null,
+    "sent_at": null,
+    "error_message": null,
+    "retry_count": 0,
+    "idempotency_key": "CIRCULAR_010_FAC025_3441d0"
+  },
+  {
+    "recipient_id": "REC_ea967ead",
+    "faculty_id": "FAC023",
+    "standard_name": "Vijay V Patil",
+    "email": "vijayvpatil13@gmail.com",
+    "status": "PENDING",
+    "resend_message_id": null,
+    "sent_at": null,
+    "error_message": null,
+    "retry_count": 0,
+    "idempotency_key": "CIRCULAR_010_FAC023_d55c8a"
+  }
+]

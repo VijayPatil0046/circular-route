@@ -1,0 +1,62 @@
+[
+  {
+    "original_reference": "Dr. Seema S",
+    "standard_name": "Dr. Seema S.",
+    "faculty_id": "FAC001",
+    "department": "Computer Science & Engineering",
+    "email": "seema.cs@institution.edu",
+    "similarity_score": 1.0,
+    "matching_explanation": "Matched 'Dr. Seema S' to 'Dr. Seema S.' with local confidence 1.00.",
+    "supporting_evidence": "Found in To section context: 'Section: To'",
+    "relevance_explanation": "Direct recipient designated in To section.",
+    "section_found": "To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "Prof. Rajesh Kumar",
+    "standard_name": "Prof. Rajesh Kumar",
+    "faculty_id": "FAC002",
+    "department": "Computer Science & Engineering",
+    "email": "rajesh.kumar@institution.edu",
+    "similarity_score": 1.0,
+    "matching_explanation": "Matched 'Prof. Rajesh Kumar' to 'Prof. Rajesh Kumar' with local confidence 1.00.",
+    "supporting_evidence": "Found in To section context: 'Section: To'",
+    "relevance_explanation": "Direct recipient designated in To section.",
+    "section_found": "To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "Head of Department",
+    "standard_name": "Unresolved / Unknown Candidate",
+    "faculty_id": "UNKNOWN",
+    "department": "",
+    "email": "",
+    "similarity_score": 0.0,
+    "matching_explanation": "No matching faculty found in institutional directory for 'Head of Department'.",
+    "supporting_evidence": "Appeared in 'Copy To' section.",
+    "relevance_explanation": "Candidate requires manual identification or is an external recipient.",
+    "section_found": "Copy To",
+    "verification_status": "AMBIGUOUS",
+    "is_verified": false,
+    "manual_override": false
+  },
+  {
+    "original_reference": "All the above nominated faculty members are requested to review the revised curriculum guidelines",
+    "standard_name": "Unresolved / Unknown Candidate",
+    "faculty_id": "UNKNOWN",
+    "department": "",
+    "email": "",
+    "similarity_score": 0.0,
+    "matching_explanation": "No matching faculty found in institutional directory for 'All the above nominated faculty members are requested to review the revised curriculum guidelines'.",
+    "supporting_evidence": "Appeared in 'Copy To' section.",
+    "relevance_explanation": "Candidate requires manual identification or is an external recipient.",
+    "section_found": "Copy To",
+    "verification_status": "AMBIGUOUS",
+    "is_verified": false,
+    "manual_override": false
+  }
+]

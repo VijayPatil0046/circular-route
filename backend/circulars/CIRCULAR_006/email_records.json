@@ -1,0 +1,26 @@
+[
+  {
+    "recipient_id": "REC_911d2f5f",
+    "faculty_id": "FAC001",
+    "standard_name": "Dr. Seema S.",
+    "email": "seema.cs@institution.edu",
+    "status": "FAILED",
+    "resend_message_id": null,
+    "sent_at": null,
+    "error_message": "HTTPSConnectionPool(host='api.resend.com', port=443): Max retries exceeded with url: /emails (Caused by NameResolutionError(\"HTTPSConnection(host='api.resend.com', port=443): Failed to resolve 'api.resend.com' ([Errno 11001] getaddrinfo failed)\"))",
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_006_FAC001_95f0bf"
+  },
+  {
+    "recipient_id": "REC_d389f878",
+    "faculty_id": "FAC002",
+    "standard_name": "Prof. Rajesh Kumar",
+    "email": "rajesh.kumar@institution.edu",
+    "status": "FAILED",
+    "resend_message_id": null,
+    "sent_at": null,
+    "error_message": "HTTPSConnectionPool(host='api.resend.com', port=443): Max retries exceeded with url: /emails (Caused by NameResolutionError(\"HTTPSConnection(host='api.resend.com', port=443): Failed to resolve 'api.resend.com' ([Errno 11001] getaddrinfo failed)\"))",
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_006_FAC002_53ef08"
+  }
+]

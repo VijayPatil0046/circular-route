@@ -1,0 +1,100 @@
+{
+  "faculties": [
+    {
+      "id": "FAC001",
+      "standard_name": "Dr. Seema S.",
+      "department": "Computer Science & Engineering",
+      "designation": "Professor & HOD",
+      "aliases": [
+        "Seema",
+        "Dr Seema",
+        "Dr. Seema",
+        "S. Seema",
+        "Dr. S. Seema",
+        "Prof. Seema S.",
+        "Dr. Seema Sharma"
+      ],
+      "email": "seema.cs@institution.edu"
+    },
+    {
+      "id": "FAC002",
+      "standard_name": "Prof. Rajesh Kumar",
+      "department": "Computer Science & Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Rajesh",
+        "Prof Rajesh",
+        "R. Kumar",
+        "Prof RK",
+        "Prof. Rajesh",
+        "Dr. Rajesh Kumar",
+        "R.K."
+      ],
+      "email": "rajesh.kumar@institution.edu"
+    },
+    {
+      "id": "FAC021",
+      "standard_name": "Vijay Patil",
+      "department": "Computer Science & Engineering",
+      "designation": "Student",
+      "aliases": [
+        "Vijay p"
+      ],
+      "email": "vijaypatil00046@gmail.com"
+    },
+    {
+      "id": "FAC022",
+      "standard_name": "Venkatachala V",
+      "department": "Unknown",
+      "designation": "Unknown",
+      "aliases": [
+        "Venkatachala",
+        "V. Venkatachala"
+      ],
+      "email": "venkatachalavenku029@gmail.com"
+    },
+    {
+      "id": "FAC023",
+      "standard_name": "Vijay V Patil",
+      "department": "Unknown",
+      "designation": "Unknown",
+      "aliases": [
+        "Vijay V",
+        "V. V. Patil"
+      ],
+      "email": "vijayvpatil13@gmail.com"
+    },
+    {
+      "id": "FAC024",
+      "standard_name": "Suresh Kumar P",
+      "department": "Unknown",
+      "designation": "Unknown",
+      "aliases": [
+        "Suresh",
+        "S. Kumar"
+      ],
+      "email": "vijaykumarlkonapur@gmail.com"
+    },
+    {
+      "id": "FAC025",
+      "standard_name": "Kiran S",
+      "department": "Unknown",
+      "designation": "Unknown",
+      "aliases": [
+        "Kiran",
+        "K. S."
+      ],
+      "email": "vijayvpatil13@gmail.com"
+    },
+    {
+      "id": "FAC026",
+      "standard_name": "Zaid",
+      "department": "Unknown",
+      "designation": "Unknown",
+      "aliases": [
+        "Zaid"
+      ],
+      "email": "vijaypatil00046@gmail.com"
+    }
+  ]
+}

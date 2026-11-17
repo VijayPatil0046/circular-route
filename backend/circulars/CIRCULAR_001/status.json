@@ -1,0 +1,18 @@
+{
+  "circular_id": "CIRCULAR_001",
+  "filename": "c3 (3).png",
+  "file_type": "png",
+  "file_size_bytes": 335760,
+  "page_count": 1,
+  "current_state": "COMPLETED",
+  "created_at": "2026-11-17T19:01:27.781150",
+  "updated_at": "2026-11-17T19:23:55.181325",
+  "error_message": "Manually marked as resolved by user.",
+  "summary": "The provided document is marked as unreadable, preventing the extraction of any specific content, instructions, or deadlines. Consequently, no factual summary regarding the circular's subject matter or required actions can be generated.",
+  "has_extracted_text": true,
+  "matches_count": 0,
+  "verified_matches_count": 0,
+  "pending_review_count": 0,
+  "emails_sent_count": 0,
+  "emails_failed_count": 0
+}

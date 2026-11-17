@@ -1,0 +1,18 @@
+{
+  "circular_id": "CIRCULAR_005",
+  "filename": "test_meeting_notice.pdf",
+  "file_type": "pdf",
+  "file_size_bytes": 1024,
+  "page_count": 1,
+  "current_state": "FAILED",
+  "created_at": "2026-11-17T21:17:45.260123",
+  "updated_at": "2026-11-17T21:17:45.520942",
+  "error_message": "All email deliveries failed.",
+  "summary": "Circular issued: NATIONAL INSTITUTE OF ENGINEERING & TECHNOLOGY. All the above nominated faculty members are requested to review the revised curriculum guidelines. Important timeline mentioned: Date: 17 November 2026.",
+  "has_extracted_text": true,
+  "matches_count": 3,
+  "verified_matches_count": 2,
+  "pending_review_count": 1,
+  "emails_sent_count": 0,
+  "emails_failed_count": 2
+}

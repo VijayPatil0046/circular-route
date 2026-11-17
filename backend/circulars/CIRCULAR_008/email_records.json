@@ -1,0 +1,50 @@
+[
+  {
+    "recipient_id": "REC_9e853234",
+    "faculty_id": "FAC021",
+    "standard_name": "Vijay Patil",
+    "email": "vijaypatil00046@gmail.com",
+    "status": "FAILED",
+    "resend_message_id": null,
+    "sent_at": null,
+    "error_message": "('Connection aborted.', TimeoutError('The write operation timed out'))",
+    "retry_count": 2,
+    "idempotency_key": "CIRCULAR_008_FAC021_ceec06"
+  },
+  {
+    "recipient_id": "REC_a0885bb4",
+    "faculty_id": "FAC022",
+    "standard_name": "Venkatachala V",
+    "email": "venkatachalavenku029@gmail.com",
+    "status": "FAILED",
+    "resend_message_id": null,
+    "sent_at": null,
+    "error_message": "('Connection aborted.', TimeoutError('The write operation timed out'))",
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_008_FAC022_698121"
+  },
+  {
+    "recipient_id": "REC_7b894172",
+    "faculty_id": "FAC024",
+    "standard_name": "Suresh Kumar P",
+    "email": "vijaykumarlkonapur@gmail.com",
+    "status": "FAILED",
+    "resend_message_id": null,
+    "sent_at": null,
+    "error_message": "('Connection aborted.', TimeoutError('The write operation timed out'))",
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_008_FAC024_f50509"
+  },
+  {
+    "recipient_id": "REC_ab925681",
+    "faculty_id": "FAC025",
+    "standard_name": "Kiran S",
+    "email": "vijayvpatil13@gmail.com",
+    "status": "FAILED",
+    "resend_message_id": null,
+    "sent_at": null,
+    "error_message": "HTTPSConnectionPool(host='api.resend.com', port=443): Max retries exceeded with url: /emails (Caused by NameResolutionError(\"HTTPSConnection(host='api.resend.com', port=443): Failed to resolve 'api.resend.com' ([Errno 11001] getaddrinfo failed)\"))",
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_008_FAC025_09cbe3"
+  }
+]
