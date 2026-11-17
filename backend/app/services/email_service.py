@@ -3,6 +3,7 @@ import logging
 import uuid
 import threading
 import httpx
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from datetime import datetime
 from typing import List, Dict, Any, Optional, Tuple
@@ -151,39 +152,52 @@ class EmailService:
 
         email_subject = subject or f"[CircularRoute Notification] Institutional Circular – {circular_id}"
 
-        # Send to each eligible recipient
+        # Send to eligible recipients in parallel, while keeping persistence on
+        # this thread so simultaneous completions cannot overwrite one another.
         all_sent = True
-        any_sent = False
-
-        for rec in records:
-            # Skip if already SENT or DELIVERED
-            if rec.status in ("SENT", "DELIVERED"):
-                any_sent = True
-                continue
-
+        any_sent = any(rec.status in ("SENT", "DELIVERED") for rec in records)
+        pending_records = [rec for rec in records if rec.status not in ("SENT", "DELIVERED")]
+        for rec in pending_records:
             rec.status = "SENDING"
-            storage_service.save_email_records(circular_id, [r.dict() for r in records])
+            rec.error_message = None
 
-            success, message_id, err_msg = self._dispatch_single_email(
-                recipient=rec,
-                subject=email_subject,
-                summary=summary,
-                attachment=attachment_payload
-            )
+        storage_service.save_email_records(circular_id, [r.dict() for r in records])
 
-            if success:
-                rec.status = "SENT"
-                rec.resend_message_id = message_id
-                rec.sent_at = datetime.now().isoformat()
-                rec.error_message = None
-                any_sent = True
-            else:
-                rec.status = "FAILED"
-                rec.error_message = err_msg
-                all_sent = False
+        if pending_records:
+            max_workers = min(4, len(pending_records))
+            with ThreadPoolExecutor(max_workers=max_workers, thread_name_prefix="resend") as executor:
+                future_to_record = {
+                    executor.submit(
+                        self._dispatch_single_email,
+                        recipient=rec,
+                        subject=email_subject,
+                        summary=summary,
+                        attachment=attachment_payload
+                    ): rec
+                    for rec in pending_records
+                }
 
-            rec.retry_count += 1
-            storage_service.save_email_records(circular_id, [r.dict() for r in records])
+                for future in as_completed(future_to_record):
+                    rec = future_to_record[future]
+                    try:
+                        success, message_id, err_msg = future.result()
+                    except Exception as e:
+                        logger.error(f"Unexpected dispatch worker failure for {rec.email}: {e}", exc_info=True)
+                        success, message_id, err_msg = False, None, f"Dispatch worker failed: {type(e).__name__}: {e}"
+
+                    if success:
+                        rec.status = "SENT"
+                        rec.resend_message_id = message_id
+                        rec.sent_at = datetime.now().isoformat()
+                        rec.error_message = None
+                        any_sent = True
+                    else:
+                        rec.status = "FAILED"
+                        rec.error_message = err_msg
+                        all_sent = False
+
+                    rec.retry_count += 1
+                    storage_service.save_email_records(circular_id, [r.dict() for r in records])
 
         # Update final circular state
         if all_sent and len(records) > 0:

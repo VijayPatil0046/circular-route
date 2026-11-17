@@ -40,11 +40,11 @@
     "faculty_id": "FAC025",
     "standard_name": "Kiran S",
     "email": "vijayvpatil13@gmail.com",
-    "status": "SENDING",
-    "resend_message_id": null,
-    "sent_at": null,
+    "status": "SENT",
+    "resend_message_id": "01a1ea6c-f63b-75db-9272-cda4ea268ef7",
+    "sent_at": "2026-11-17T22:23:09.147223",
     "error_message": null,
-    "retry_count": 0,
+    "retry_count": 1,
     "idempotency_key": "CIRCULAR_010_FAC025_3441d0"
   },
   {
@@ -52,11 +52,11 @@
     "faculty_id": "FAC023",
     "standard_name": "Vijay V Patil",
     "email": "vijayvpatil13@gmail.com",
-    "status": "PENDING",
-    "resend_message_id": null,
-    "sent_at": null,
+    "status": "SENT",
+    "resend_message_id": "01a1ea6e-5793-7f3b-9390-fa81d51ec151",
+    "sent_at": "2026-11-17T22:24:53.108405",
     "error_message": null,
-    "retry_count": 0,
+    "retry_count": 2,
     "idempotency_key": "CIRCULAR_010_FAC023_d55c8a"
   }
 ]
