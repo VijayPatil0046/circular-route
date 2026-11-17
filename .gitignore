@@ -17,7 +17,7 @@ node_modules/
 dist/
 dist-ssr/
 *.local
-
+circulars
 # Circular Storage data
 circulars/*/original.*
 circulars/*/*.txt
