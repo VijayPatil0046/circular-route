@@ -294,7 +294,9 @@ class FacultyService:
             except Exception as e:
                 logger.error(f"Error in LLM Call 2 ({e}). Falling back to local resolution.")
 
-        if not stage2_success:
+        if stage2_success:
+            matches = self._apply_top_candidate_fallback(matches, candidates_with_embedding_context)
+        else:
             # Local fallback for Stage 2
             pre_matches = [
                 {
@@ -325,6 +327,80 @@ class FacultyService:
         )
 
         return deduped, requires_review, llm_summary
+
+    def _apply_top_candidate_fallback(
+        self,
+        matches: List[FacultyMatch],
+        candidates_with_context: List[Dict[str, Any]]
+    ) -> List[FacultyMatch]:
+        """Use the highest-scoring directory candidate when it reaches 50%."""
+        match_by_reference = {normalize_name(m.original_reference): i for i, m in enumerate(matches)}
+
+        for item in candidates_with_context:
+            raw_reference = item["extracted_name"]
+            key = normalize_name(raw_reference)
+            match_index = match_by_reference.get(key)
+            current_match = matches[match_index] if match_index is not None else None
+            if current_match and current_match.faculty_id != "UNKNOWN":
+                continue
+
+            top_candidates = item.get("top_local_candidates", [])
+            if not top_candidates:
+                continue
+
+            best_faculty, best_score = top_candidates[0]
+            if best_score < 0.50:
+                below_cutoff_explanation = (
+                    f"Similarity {best_score:.1%} is below the 50% automatic-match cutoff. "
+                    "Select and confirm a faculty member manually."
+                )
+                if current_match:
+                    current_match.standard_name = best_faculty.standard_name
+                    current_match.similarity_score = round(best_score, 4)
+                    current_match.matching_explanation = below_cutoff_explanation
+                else:
+                    matches.append(FacultyMatch(
+                        original_reference=raw_reference,
+                        standard_name=best_faculty.standard_name,
+                        faculty_id="UNKNOWN",
+                        department="",
+                        email="",
+                        similarity_score=round(best_score, 4),
+                        matching_explanation=below_cutoff_explanation,
+                        supporting_evidence=f"Extracted from {item['section']} section.",
+                        relevance_explanation="Requires manual faculty selection.",
+                        section_found=item["section"],
+                        verification_status="AMBIGUOUS",
+                        is_verified=False
+                    ))
+                    match_by_reference[key] = len(matches) - 1
+                continue
+
+            fallback_match = FacultyMatch(
+                original_reference=raw_reference,
+                standard_name=best_faculty.standard_name,
+                faculty_id=best_faculty.id,
+                department=best_faculty.department,
+                email=best_faculty.email,
+                similarity_score=round(best_score, 4),
+                matching_explanation=(
+                    f"Selected the highest-scoring directory candidate, {best_faculty.standard_name}, "
+                    f"with similarity {best_score:.1%} (50% minimum)."
+                ),
+                supporting_evidence=f"Extracted from {item['section']} section.",
+                relevance_explanation=f"Recipient candidate found in {item['section']} section.",
+                section_found=item["section"],
+                verification_status="AUTO_VERIFIED",
+                is_verified=True
+            )
+
+            if match_index is None:
+                matches.append(fallback_match)
+                match_by_reference[key] = len(matches) - 1
+            else:
+                matches[match_index] = fallback_match
+
+        return matches
 
     def _call_groq_stage1_extract_recipients(
         self,
@@ -503,9 +579,8 @@ Respond ONLY in valid JSON matching this schema:
                 ))
             else:
                 backend_score = self.compute_similarity(raw_ref, faculty)
-                final_score = max(conf, backend_score)
-                if final_score < 0.70:
-                    is_ambiguous = True
+                final_score = backend_score
+                is_ambiguous = final_score < 0.50
 
                 status = "AMBIGUOUS" if is_ambiguous else "AUTO_VERIFIED"
                 matches.append(FacultyMatch(
@@ -551,14 +626,7 @@ Respond ONLY in valid JSON matching this schema:
 
             best_faculty, best_score = top[0]
             
-            is_ambiguous = False
-            if len(top) > 1:
-                second_faculty, second_score = top[1]
-                if abs(best_score - second_score) < 0.12 and best_score < 0.90:
-                    is_ambiguous = True
-
-            if best_score < 0.70:
-                is_ambiguous = True
+            is_ambiguous = best_score < 0.50
 
             verification_status = "AMBIGUOUS" if is_ambiguous else "AUTO_VERIFIED"
             

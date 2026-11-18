@@ -253,25 +253,35 @@ def submit_faculty_review(
         ref = item.original_reference
         if ref in matches_dict:
             target = matches_dict[ref]
-            if item.action == "CONFIRM":
-                target["verification_status"] = "MANUALLY_CONFIRMED"
-                target["is_verified"] = True
-                target["manual_override"] = True
-            elif item.action == "REJECT":
+            if item.action == "REJECT":
                 target["verification_status"] = "REJECTED"
                 target["is_verified"] = False
                 target["manual_override"] = True
-            elif item.action == "REPLACE" and item.replacement_faculty_id:
+            elif item.replacement_faculty_id:
                 rep_faculty = faculty_service.get_faculty_by_id(item.replacement_faculty_id)
-                if rep_faculty:
-                    target["standard_name"] = rep_faculty.standard_name
-                    target["faculty_id"] = rep_faculty.id
-                    target["department"] = rep_faculty.department
-                    target["email"] = rep_faculty.email
+                if not rep_faculty or not rep_faculty.email:
+                    raise HTTPException(
+                        status_code=400,
+                        detail="Selected faculty does not have a usable email address."
+                    )
+                target["standard_name"] = rep_faculty.standard_name
+                target["faculty_id"] = rep_faculty.id
+                target["department"] = rep_faculty.department
+                target["email"] = rep_faculty.email
+                target["verification_status"] = "MANUALLY_CONFIRMED"
+                target["is_verified"] = True
+                target["manual_override"] = True
+                target["matching_explanation"] = f"Manually assigned to {rep_faculty.standard_name} by user."
+            elif item.action == "CONFIRM":
+                faculty = faculty_service.get_faculty_by_id(target.get("faculty_id", ""))
+                if faculty and faculty.email:
+                    target["standard_name"] = faculty.standard_name
+                    target["faculty_id"] = faculty.id
+                    target["department"] = faculty.department
+                    target["email"] = faculty.email
                     target["verification_status"] = "MANUALLY_CONFIRMED"
                     target["is_verified"] = True
                     target["manual_override"] = True
-                    target["matching_explanation"] = f"Manually assigned to {rep_faculty.standard_name} by user."
 
     updated_matches = list(matches_dict.values())
     storage_service.save_faculty_matches(circular_id, updated_matches)

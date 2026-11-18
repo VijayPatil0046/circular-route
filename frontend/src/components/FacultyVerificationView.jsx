@@ -26,18 +26,50 @@ export default function FacultyVerificationView({
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState(null);
 
-  const ambiguousCount = matches.filter(
-    (m) => m.verification_status === 'AMBIGUOUS' || !m.is_verified
-  ).length;
+  const ambiguousCount = matches.filter((m) => {
+    const selectedFaculty = facultyDirectory.find((f) => f.id === replacements[m.original_reference]);
+    if (selectedFaculty?.email) return false;
+    return (
+      m.verification_status === 'AMBIGUOUS' ||
+      !m.is_verified ||
+      m.faculty_id === 'UNKNOWN' ||
+      !m.email
+    );
+  }).length;
 
   const handleAction = (ref, action) => {
+    const selectedFacultyId = replacements[ref];
+    const nextAction = action === 'CONFIRM' && selectedFacultyId ? 'REPLACE' : action;
+
     setReviews((prev) => ({
       ...prev,
-      [ref]: action,
+      [ref]: nextAction,
     }));
+
+    if (action === 'REJECT') {
+      setReplacements((prev) => {
+        const next = { ...prev };
+        delete next[ref];
+        return next;
+      });
+    }
   };
 
   const handleReplacement = (ref, targetFacultyId) => {
+    if (!targetFacultyId) {
+      setReplacements((prev) => {
+        const next = { ...prev };
+        delete next[ref];
+        return next;
+      });
+      setReviews((prev) => {
+        const next = { ...prev };
+        if (next[ref] === 'REPLACE') delete next[ref];
+        return next;
+      });
+      return;
+    }
+
     setReviews((prev) => ({
       ...prev,
       [ref]: 'REPLACE',
@@ -131,8 +163,11 @@ export default function FacultyVerificationView({
             const currentDecision = reviews[m.original_reference];
             const isAmbiguous = m.verification_status === 'AMBIGUOUS';
             const isRejected = currentDecision === 'REJECT' || m.verification_status === 'REJECTED';
-            const isConfirmed = currentDecision === 'CONFIRM' || m.verification_status === 'MANUALLY_CONFIRMED' || m.verification_status === 'AUTO_VERIFIED';
-
+            const selectedFaculty = facultyDirectory.find((f) => f.id === replacements[m.original_reference]);
+            const resolvedName = selectedFaculty?.standard_name || m.standard_name;
+            const resolvedId = selectedFaculty?.id || m.faculty_id;
+            const resolvedDepartment = selectedFaculty?.department || m.department;
+            const resolvedEmail = selectedFaculty?.email || m.email;
             const scorePercent = Math.round(m.similarity_score * 100);
 
             return (
@@ -154,7 +189,9 @@ export default function FacultyVerificationView({
                         Section: {m.section_found}
                       </span>
                       <StatusPill status={currentDecision ? `MANUAL: ${currentDecision}` : m.verification_status} />
-                      {m.similarity_score > 0 && (
+                      {selectedFaculty ? (
+                        <span className="text-xs text-emerald-700 font-medium">Manual faculty selection</span>
+                      ) : m.similarity_score > 0 && (
                         <span className="text-xs text-slate-500 font-mono">
                           Confidence: <strong>{scorePercent}%</strong>
                         </span>
@@ -175,23 +212,23 @@ export default function FacultyVerificationView({
                         Resolved Canonical Faculty:
                       </div>
                       <div className="text-sm font-bold text-indigo-900 flex items-center gap-2">
-                        <span>{m.standard_name}</span>
-                        {m.faculty_id !== 'UNKNOWN' && (
+                        <span>{resolvedName}</span>
+                        {resolvedId !== 'UNKNOWN' && (
                           <span className="text-xs font-mono bg-indigo-50 text-indigo-700 px-1.5 py-0.5 rounded border border-indigo-200 font-normal">
-                            {m.faculty_id}
+                            {resolvedId}
                           </span>
                         )}
                       </div>
-                      {m.department && (
+                      {resolvedDepartment && (
                         <div className="text-xs text-slate-500 flex items-center gap-1 mt-0.5">
                           <Building className="h-3 w-3 text-slate-400" />
-                          <span>{m.department}</span>
+                          <span>{resolvedDepartment}</span>
                         </div>
                       )}
-                      {m.email && (
+                      {resolvedEmail && (
                         <div className="text-xs text-slate-600 flex items-center gap-1 mt-0.5 font-mono">
                           <Mail className="h-3 w-3 text-slate-400" />
-                          <span>{m.email}</span>
+                          <span>{resolvedEmail}</span>
                         </div>
                       )}
                     </div>
@@ -216,11 +253,12 @@ export default function FacultyVerificationView({
                     <div className="flex items-center gap-1.5">
                       <button
                         type="button"
+                        disabled={submitting || (m.faculty_id === 'UNKNOWN' && !selectedFaculty)}
                         onClick={() => handleAction(m.original_reference, 'CONFIRM')}
                         className={`px-3 py-1.5 text-xs font-medium rounded-lg border transition-colors flex items-center gap-1 ${
-                          currentDecision === 'CONFIRM' || (!currentDecision && m.verification_status === 'AUTO_VERIFIED')
+                          currentDecision === 'CONFIRM' || currentDecision === 'REPLACE' || (!currentDecision && m.verification_status === 'AUTO_VERIFIED')
                             ? 'bg-emerald-600 text-white border-emerald-600 shadow-sm'
-                            : 'bg-white hover:bg-emerald-50 text-emerald-700 border-slate-200'
+                            : 'bg-white hover:bg-emerald-50 text-emerald-700 border-slate-200 disabled:opacity-40 disabled:cursor-not-allowed'
                         }`}
                       >
                         <CheckCircle2 className="h-3.5 w-3.5" />
