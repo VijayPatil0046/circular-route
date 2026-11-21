@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="690" viewBox="0 0 1120 690">
+<rect width="100%" height="100%" fill="#fff"/>
+<style>text{font:14px Arial,sans-serif;fill:#334155}.title{font-size:23px;font-weight:700;fill:#0f172a}.subtitle{font-size:13px;fill:#64748b}.axis{stroke:#64748b}.grid{stroke:#e2e8f0}</style>
+<text class="title" x="560.0" y="35" text-anchor="middle">OCR Latency by Document Page Count</text>
+<text class="subtitle" x="560.0" y="58" text-anchor="middle">Measured project circulars · each dot is one OCR run</text>
+<text x="560.0" y="660" text-anchor="middle">Number of pages</text>
+<text x="24" y="345.0" text-anchor="middle" transform="rotate(-90 24 345.0)">OCR latency (seconds)</text>
+<line class="grid" x1="90" y1="585.0" x2="1065" y2="585.0"/>
+<text x="78" y="590.0" text-anchor="end">0</text>
+<line class="grid" x1="90" y1="485.2" x2="1065" y2="485.2"/>
+<text x="78" y="490.2" text-anchor="end">12</text>
+<line class="grid" x1="90" y1="385.4" x2="1065" y2="385.4"/>
+<text x="78" y="390.4" text-anchor="end">24</text>
+<line class="grid" x1="90" y1="285.6" x2="1065" y2="285.6"/>
+<text x="78" y="290.6" text-anchor="end">36</text>
+<line class="grid" x1="90" y1="185.8" x2="1065" y2="185.8"/>
+<text x="78" y="190.8" text-anchor="end">48</text>
+<line class="grid" x1="90" y1="86.0" x2="1065" y2="86.0"/>
+<text x="78" y="91.0" text-anchor="end">60</text>
+<text x="252.5" y="612" text-anchor="middle">1</text>
+<text x="577.5" y="612" text-anchor="middle">2</text>
+<text x="902.5" y="612" text-anchor="middle">3</text>
+<line class="axis" x1="90" y1="86" x2="90" y2="585"/>
+<line class="axis" x1="90" y1="585" x2="1065" y2="585"/>
+<circle cx="205.8" cy="215.5" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_001: 1 page(s), 44.43s *</title></circle>
+<circle cx="212.5" cy="542.0" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_002: 1 page(s), 5.17s </title></circle>
+<circle cx="219.2" cy="488.4" r="7" fill="#9333ea" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_003: 1 page(s), 11.61s </title></circle>
+<circle cx="225.8" cy="563.5" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_004: 1 page(s), 2.58s </title></circle>
+<circle cx="232.5" cy="559.5" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_008: 1 page(s), 3.07s </title></circle>
+<circle cx="239.2" cy="561.3" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_009: 1 page(s), 2.85s </title></circle>
+<circle cx="245.8" cy="563.9" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_010: 1 page(s), 2.53s </title></circle>
+<circle cx="252.5" cy="491.8" r="7" fill="#9333ea" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_011: 1 page(s), 11.20s </title></circle>
+<circle cx="259.2" cy="419.8" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_013: 1 page(s), 19.86s </title></circle>
+<circle cx="265.8" cy="420.5" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_014: 1 page(s), 19.78s </title></circle>
+<circle cx="272.5" cy="196.0" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_015: 1 page(s), 46.78s </title></circle>
+<circle cx="279.2" cy="418.7" r="7" fill="#9333ea" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_016: 1 page(s), 20.00s </title></circle>
+<circle cx="285.8" cy="534.2" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_017: 1 page(s), 6.11s </title></circle>
+<circle cx="292.5" cy="204.4" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_018: 1 page(s), 45.76s </title></circle>
+<circle cx="299.2" cy="130.3" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_019: 1 page(s), 54.67s </title></circle>
+<circle cx="896.0" cy="376.3" r="7" fill="#9333ea" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_012: 3 page(s), 25.09s </title></circle>
+<circle cx="909.0" cy="290.3" r="7" fill="#2563eb" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_021: 3 page(s), 35.44s </title></circle>
+<circle cx="571.0" cy="155.9" r="7" fill="#9333ea" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_020: 2 page(s), 51.60s *</title></circle>
+<circle cx="584.0" cy="516.5" r="7" fill="#9333ea" fill-opacity=".84" stroke="#fff" stroke-width="1.5"><title>CIRCULAR_022: 2 page(s), 8.23s </title></circle>
+<circle cx="115" cy="620" r="6" fill="#2563eb"/>
+<text x="127" y="625">Printed</text>
+<circle cx="240" cy="620" r="6" fill="#9333ea"/>
+<text x="252" y="625">Handwritten marker</text>
+<text class="subtitle" x="1065" y="625" text-anchor="end">* First run includes model initialization</text>
+</svg>
