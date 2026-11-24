@@ -1,6 +1,8 @@
 import os
 import shutil
 import logging
+import time
+from datetime import datetime, timezone
 from pathlib import Path
 from typing import List, Optional
 from fastapi import APIRouter, UploadFile, File, BackgroundTasks, HTTPException, Query, status
@@ -27,7 +29,10 @@ logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="", tags=["Circulars"])
 
-def execute_circular_pipeline(circular_id: str):
+def execute_circular_pipeline(
+    circular_id: str,
+    upload_started_monotonic: Optional[float] = None,
+):
     """
     Background worker pipeline for automated circular processing:
     1. OCR extraction (PyMuPDF + OpenCV + PaddleOCR + TrOCR)
@@ -58,6 +63,12 @@ def execute_circular_pipeline(circular_id: str):
         # Stage 2: Faculty Identification & 2-Stage LLM Resolution
         storage_service.update_state(circular_id, ProcessingState.IDENTIFYING_FACULTY)
         matches, requires_review, _ = faculty_service.resolve_faculty(extracted_text)
+        if upload_started_monotonic is not None:
+            storage_service.save_recipient_identification_timing(
+                circular_id=circular_id,
+                completed_at=datetime.now(timezone.utc).isoformat(),
+                duration_seconds=time.perf_counter() - upload_started_monotonic,
+            )
         storage_service.save_faculty_matches(circular_id, [m.model_dump() for m in matches])
 
         # Stage 3: Summarize circular content separately from recipient extraction.
@@ -102,6 +113,9 @@ async def upload_circular(
     Prevents new upload if an existing circular remains unresolved.
     Saves document and triggers background processing pipeline.
     """
+    upload_started_monotonic = time.perf_counter()
+    upload_received_at = datetime.now(timezone.utc).isoformat()
+
     # 1. Enforce single active circular lock
     unresolved_id = storage_service.has_unresolved_circular()
     if unresolved_id:
@@ -141,7 +155,8 @@ async def upload_circular(
         original_filename=filename,
         file_type=ext.lstrip("."),
         file_size=file_size,
-        page_count=1
+        page_count=1,
+        upload_received_at=upload_received_at,
     )
 
     # 5. Save original document unmodified
@@ -152,7 +167,11 @@ async def upload_circular(
     logger.info(f"Stored circular {circular_id} at {saved_doc_path}")
 
     # 6. Schedule background pipeline
-    background_tasks.add_task(execute_circular_pipeline, circular_id)
+    background_tasks.add_task(
+        execute_circular_pipeline,
+        circular_id,
+        upload_started_monotonic,
+    )
 
     # 7. Return initial response
     status_data = storage_service.load_status(circular_id)
@@ -165,6 +184,16 @@ async def upload_circular(
         current_state=ProcessingState.UPLOADED,
         created_at=status_data.get("created_at", ""),
         updated_at=status_data.get("updated_at", ""),
+        upload_received_at=status_data.get("upload_received_at"),
+        recipient_identification_completed_at=status_data.get("recipient_identification_completed_at"),
+        upload_to_recipient_identification_seconds=status_data.get("upload_to_recipient_identification_seconds"),
+        email_routing_started_at=status_data.get("email_routing_started_at"),
+        email_routing_completed_at=status_data.get("email_routing_completed_at"),
+        email_routing_duration_seconds=status_data.get("email_routing_duration_seconds"),
+        upload_to_email_routing_seconds=status_data.get("upload_to_email_routing_seconds"),
+        upload_to_first_email_routing_seconds=status_data.get("upload_to_first_email_routing_seconds"),
+        email_routing_attempts=status_data.get("email_routing_attempts", 0),
+        email_routing_runs=status_data.get("email_routing_runs", []),
         error_message=None,
         summary=None,
         has_extracted_text=False,
@@ -194,6 +223,16 @@ def get_circular_details(circular_id: str):
         current_state=state,
         created_at=status_data.get("created_at", ""),
         updated_at=status_data.get("updated_at", ""),
+        upload_received_at=status_data.get("upload_received_at"),
+        recipient_identification_completed_at=status_data.get("recipient_identification_completed_at"),
+        upload_to_recipient_identification_seconds=status_data.get("upload_to_recipient_identification_seconds"),
+        email_routing_started_at=status_data.get("email_routing_started_at"),
+        email_routing_completed_at=status_data.get("email_routing_completed_at"),
+        email_routing_duration_seconds=status_data.get("email_routing_duration_seconds"),
+        upload_to_email_routing_seconds=status_data.get("upload_to_email_routing_seconds"),
+        upload_to_first_email_routing_seconds=status_data.get("upload_to_first_email_routing_seconds"),
+        email_routing_attempts=status_data.get("email_routing_attempts", 0),
+        email_routing_runs=status_data.get("email_routing_runs", []),
         error_message=status_data.get("error_message"),
         summary=status_data.get("summary"),
         has_extracted_text=status_data.get("has_extracted_text", False),

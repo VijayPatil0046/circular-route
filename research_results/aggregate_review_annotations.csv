@@ -1,0 +1,3 @@
+﻿review_classification,count,scope,annotation_source
+Known incorrect identification among rejected records,5,Aggregate across 50 circulars; no row-level mapping supplied,User follow-up review
+Valid candidate manually excluded from dispatch,22,Aggregate across 50 circulars; no row-level mapping supplied,User follow-up review

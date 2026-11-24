@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="600" viewBox="0 0 1000 600">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d}.title{font-size:24px;font-weight:bold}.axis{font-size:15px}.small{font-size:13px}.grid{stroke:#d9e1ec;stroke-width:1}.axisline{stroke:#53657d;stroke-width:1.5}</style>
+<text x="500.0" y="38" text-anchor="middle" class="title">Median pipeline latency by document type</text>
+<line x1="100" y1="520.0" x2="955" y2="520.0" class="grid"/>
+<text x="88.0" y="525.0" text-anchor="end" class="small">0</text>
+<line x1="100" y1="457.1" x2="955" y2="457.1" class="grid"/>
+<text x="88.0" y="462.1" text-anchor="end" class="small">20</text>
+<line x1="100" y1="394.3" x2="955" y2="394.3" class="grid"/>
+<text x="88.0" y="399.3" text-anchor="end" class="small">40</text>
+<line x1="100" y1="331.4" x2="955" y2="331.4" class="grid"/>
+<text x="88.0" y="336.4" text-anchor="end" class="small">60</text>
+<line x1="100" y1="268.6" x2="955" y2="268.6" class="grid"/>
+<text x="88.0" y="273.6" text-anchor="end" class="small">80</text>
+<line x1="100" y1="205.7" x2="955" y2="205.7" class="grid"/>
+<text x="88.0" y="210.7" text-anchor="end" class="small">100</text>
+<line x1="100" y1="142.9" x2="955" y2="142.9" class="grid"/>
+<text x="88.0" y="147.9" text-anchor="end" class="small">120</text>
+<line x1="100" y1="80.0" x2="955" y2="80.0" class="grid"/>
+<text x="88.0" y="85.0" text-anchor="end" class="small">140</text>
+<line x1="100" y1="80" x2="100" y2="520" class="axisline"/>
+<line x1="100" y1="520" x2="955" y2="520" class="axisline"/>
+<rect x="216.4" y="363.4" width="38" height="156.6" fill="#7057a3" rx="4"/>
+<text x="235.4" y="354.4" text-anchor="middle" class="small">49.8</text>
+<rect x="270.4" y="323.7" width="38" height="196.3" fill="#1769aa" rx="4"/>
+<text x="289.4" y="314.7" text-anchor="middle" class="small">62.4</text>
+<text x="262.4" y="545.0" text-anchor="middle" class="axis">printed (n=28)</text>
+<rect x="481.5" y="347.0" width="38" height="173.0" fill="#7057a3" rx="4"/>
+<text x="500.5" y="338.0" text-anchor="middle" class="small">55.0</text>
+<rect x="535.5" y="278.1" width="38" height="241.9" fill="#1769aa" rx="4"/>
+<text x="554.5" y="269.1" text-anchor="middle" class="small">77.0</text>
+<text x="527.5" y="545.0" text-anchor="middle" class="axis">mixed (n=18)</text>
+<rect x="746.6" y="369.1" width="38" height="150.9" fill="#7057a3" rx="4"/>
+<text x="765.6" y="360.1" text-anchor="middle" class="small">48.0</text>
+<rect x="800.6" y="333.3" width="38" height="186.7" fill="#1769aa" rx="4"/>
+<text x="819.6" y="324.3" text-anchor="middle" class="small">59.4</text>
+<text x="792.6" y="545.0" text-anchor="middle" class="axis">handwritten (n=4)</text>
+<rect x="288.1" y="48" width="13" height="13" fill="#7057a3"/>
+<text x="309.1" y="60.0" text-anchor="start" class="small">Upload → recipient identification</text>
+<rect x="653.1" y="48" width="13" height="13" fill="#1769aa"/>
+<text x="674.1" y="60.0" text-anchor="start" class="small">Upload → first email completion</text>
+<text x="25.0" y="300.0" text-anchor="middle" class="axis" transform="rotate(-90 25 300.0)">Seconds</text>
+</svg>

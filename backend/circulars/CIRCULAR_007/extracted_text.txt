@@ -1,22 +1,55 @@
+--- PAGE 1 OF 1 ---
+RAMAIAH
+Institute of Technology
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1310/26–27
+28.10.2026
+CIRCULAR
+Subject: Scheduled Campus Network Maintenance and ERP Portal Downtime
+The Information Technology Services (ITS) cell will carry out critical core-switch firmware up-
+grades and database backup migrations on Saturday, 31.10.2026, from 2:00 PM to 8:00 PM.
+During this maintenance window, the following services will experience intermittent or com-
+plete downtime:
+• Academic ERP Portal (Attendance, CIE Entry, and Student Fee Module).
+• Campus Wi-Fi authentication across DES, ESB, and LHC academic blocks.
+• Moodle Learning Management System (LMS) and Remote Library Proxy.
+Faculty members and administrative staff are advised to save their pending entries prior to
+1:45 PM on 31.10.2026. Normal connectivity will be restored by 8:00 PM the same evening.
+Inconvenience caused is regretted.
+Head – IT Services
+Chief Information Officer
+M.S. Ramaiah Institute of Technology
+(Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
+(Autonomous Institute Affiliated to VTU)
+BENGALURU – 560 054
+Copy to:
+1. A. Singh, Electronics & Communication Engineering
+2. Dr Lakshmi Narayan, Electrical & Electronics Engineering
+3. Rohan M, Mechanical Engineering
+4. Prof. Priya Sharma, Information Science & Engineering
+5. System Administrator, Server Room
+7
 
-NATIONAL INSTITUTE OF ENGINEERING & TECHNOLOGY
-OFFICE OF THE PRINCIPAL
-
-Ref: NIET/CIR/2026/088
-Date: 17 November 2026
-
-CIRCULAR: ANNUAL SYLLABUS REVISION COMMITTEE
-
-To:
-1. Dr. Seema S., Department of CSE
-2. Prof. Rajesh Kumar, Department of CSE
-3. Dr. Anand Kulkarni, ISE Dept
-
-Copy To:
-Office of the Principal
-Office of the Registrar
-Head of Department, CSE
-
-All the above nominated faculty members are requested to review the revised curriculum guidelines
-and submit their feedback before Friday, 28th November 2026.
-    
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTU)
+(Approvedby AICTE,NewDelhi&Govt.of
+Accreditedby NBA&NAACwithA+'Grade
+Ref.No.:1310/26-27
+Subject:Scheduled CampusNetworkMaintenanceand ERPPortal Downtime
+· Academic ERP Portal (Attendance, CIE Entry, and Student Fee Module).
+· Campus Wi-Fi authentication across DES, ESB, and LHC academic blocks.
+· Moodle Learning Management System (LMS) and Remote Library Proxy.
+Head-ITServices
+ChiefInformation Officer
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstituteAffiliated toVTU)
+Bengaluru-560 054
+BENGALURU-560054
+5.System Administrator, Server Room

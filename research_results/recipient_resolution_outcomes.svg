@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="650" viewBox="0 0 1100 650">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d}.title{font-size:24px;font-weight:bold}.axis{font-size:15px}.small{font-size:13px}.grid{stroke:#d9e1ec;stroke-width:1}.axisline{stroke:#53657d;stroke-width:1.5}</style>
+<text x="550.0" y="38" text-anchor="middle" class="title">Recipient resolution and current email outcomes</text>
+<line x1="330.0" y1="85" x2="330.0" y2="595" class="grid"/>
+<text x="330.0" y="618.0" text-anchor="middle" class="small">0</text>
+<line x1="415.6" y1="85" x2="415.6" y2="595" class="grid"/>
+<text x="415.6" y="618.0" text-anchor="middle" class="small">25</text>
+<line x1="501.2" y1="85" x2="501.2" y2="595" class="grid"/>
+<text x="501.2" y="618.0" text-anchor="middle" class="small">50</text>
+<line x1="586.9" y1="85" x2="586.9" y2="595" class="grid"/>
+<text x="586.9" y="618.0" text-anchor="middle" class="small">75</text>
+<line x1="672.5" y1="85" x2="672.5" y2="595" class="grid"/>
+<text x="672.5" y="618.0" text-anchor="middle" class="small">100</text>
+<line x1="758.1" y1="85" x2="758.1" y2="595" class="grid"/>
+<text x="758.1" y="618.0" text-anchor="middle" class="small">125</text>
+<line x1="843.8" y1="85" x2="843.8" y2="595" class="grid"/>
+<text x="843.8" y="618.0" text-anchor="middle" class="small">150</text>
+<line x1="929.4" y1="85" x2="929.4" y2="595" class="grid"/>
+<text x="929.4" y="618.0" text-anchor="middle" class="small">175</text>
+<line x1="1015.0" y1="85" x2="1015.0" y2="595" class="grid"/>
+<text x="1015.0" y="618.0" text-anchor="middle" class="small">200</text>
+<text x="316.0" y="111.0" text-anchor="end" class="axis">Recorded candidates</text>
+<rect x="330" y="85" width="685.0" height="36" fill="#4c6485" rx="4"/>
+<text x="1028.0" y="110.0" text-anchor="start" class="axis">200</text>
+<text x="316.0" y="180.0" text-anchor="end" class="axis">Auto verified</text>
+<rect x="330" y="154" width="558.3" height="36" fill="#00856a" rx="4"/>
+<text x="901.3" y="179.0" text-anchor="start" class="axis">163</text>
+<text x="316.0" y="249.0" text-anchor="end" class="axis">Manually confirmed</text>
+<rect x="330" y="223" width="34.2" height="36" fill="#1769aa" rx="4"/>
+<text x="377.2" y="248.0" text-anchor="start" class="axis">10</text>
+<text x="316.0" y="318.0" text-anchor="end" class="axis">Known incorrect ID (rejected)</text>
+<rect x="330" y="292" width="17.1" height="36" fill="#bd3545" rx="4"/>
+<text x="360.1" y="317.0" text-anchor="start" class="axis">5</text>
+<text x="316.0" y="387.0" text-anchor="end" class="axis">Valid candidate excluded from dispatch</text>
+<rect x="330" y="361" width="75.3" height="36" fill="#c05a00" rx="4"/>
+<text x="418.4" y="386.0" text-anchor="start" class="axis">22</text>
+<text x="316.0" y="456.0" text-anchor="end" class="axis">Pending review</text>
+<rect x="330" y="430" width="0.0" height="36" fill="#8a8f98" rx="4"/>
+<text x="343.0" y="455.0" text-anchor="start" class="axis">0</text>
+<text x="316.0" y="525.0" text-anchor="end" class="axis">Current email records SENT</text>
+<rect x="330" y="499" width="592.5" height="36" fill="#1f8f5f" rx="4"/>
+<text x="935.5" y="524.0" text-anchor="start" class="axis">173</text>
+<text x="672.5" y="635.0" text-anchor="middle" class="axis">Count across 50 circulars</text>
+</svg>

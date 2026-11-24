@@ -50,6 +50,16 @@ class CircularStatusResponse(BaseModel):
     current_state: ProcessingState
     created_at: str
     updated_at: str
+    upload_received_at: Optional[str] = None
+    recipient_identification_completed_at: Optional[str] = None
+    upload_to_recipient_identification_seconds: Optional[float] = None
+    email_routing_started_at: Optional[str] = None
+    email_routing_completed_at: Optional[str] = None
+    email_routing_duration_seconds: Optional[float] = None
+    upload_to_email_routing_seconds: Optional[float] = None
+    upload_to_first_email_routing_seconds: Optional[float] = None
+    email_routing_attempts: int = 0
+    email_routing_runs: List[Dict[str, Any]] = Field(default_factory=list)
     error_message: Optional[str] = None
     summary: Optional[str] = None
     has_extracted_text: bool = False

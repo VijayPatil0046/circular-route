@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="640" viewBox="0 0 1000 640">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial,Helvetica,sans-serif;fill:#172b4d}.title{font-size:24px;font-weight:bold}.axis{font-size:15px}.small{font-size:13px}.grid{stroke:#d9e1ec;stroke-width:1}.axisline{stroke:#53657d;stroke-width:1.5}</style>
+<text x="500.0" y="38" text-anchor="middle" class="title">First-pass completion time by document type</text>
+<line x1="95" y1="535.0" x2="950" y2="535.0" class="grid"/>
+<text x="83.0" y="540.0" text-anchor="end" class="small">0</text>
+<line x1="95" y1="470.3" x2="950" y2="470.3" class="grid"/>
+<text x="83.0" y="475.3" text-anchor="end" class="small">20</text>
+<line x1="95" y1="405.6" x2="950" y2="405.6" class="grid"/>
+<text x="83.0" y="410.6" text-anchor="end" class="small">40</text>
+<line x1="95" y1="340.9" x2="950" y2="340.9" class="grid"/>
+<text x="83.0" y="345.9" text-anchor="end" class="small">60</text>
+<line x1="95" y1="276.1" x2="950" y2="276.1" class="grid"/>
+<text x="83.0" y="281.1" text-anchor="end" class="small">80</text>
+<line x1="95" y1="211.4" x2="950" y2="211.4" class="grid"/>
+<text x="83.0" y="216.4" text-anchor="end" class="small">100</text>
+<line x1="95" y1="146.7" x2="950" y2="146.7" class="grid"/>
+<text x="83.0" y="151.7" text-anchor="end" class="small">120</text>
+<line x1="95" y1="82.0" x2="950" y2="82.0" class="grid"/>
+<text x="83.0" y="87.0" text-anchor="end" class="small">140</text>
+<line x1="95" y1="82" x2="95" y2="535" class="axisline"/>
+<line x1="95" y1="535" x2="950" y2="535" class="axisline"/>
+<line x1="248.9" y1="441.2" x2="248.9" y2="193.3" stroke="#1769aa" stroke-width="2"/>
+<line x1="224.9" y1="441.2" x2="272.9" y2="441.2" stroke="#1769aa" stroke-width="2"/>
+<line x1="224.9" y1="193.3" x2="272.9" y2="193.3" stroke="#1769aa" stroke-width="2"/>
+<rect x="200.9" y="285.8" width="96" height="130.9" fill="#1769aa" fill-opacity="0.22" stroke="#1769aa" stroke-width="2"/>
+<line x1="200.9" y1="333.0" x2="296.9" y2="333.0" stroke="#1769aa" stroke-width="3"/>
+<circle cx="230.9" cy="304.3" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_001: 71.31s</title></circle>
+<circle cx="248.9" cy="412.7" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_002: 37.80s</title></circle>
+<circle cx="266.9" cy="436.5" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_003: 30.43s</title></circle>
+<circle cx="284.9" cy="436.4" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_004: 30.47s</title></circle>
+<circle cx="227.9" cy="366.9" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_005: 51.94s</title></circle>
+<circle cx="245.9" cy="432.2" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_006: 31.77s</title></circle>
+<circle cx="263.9" cy="429.2" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_007: 32.70s</title></circle>
+<circle cx="281.9" cy="428.7" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_008: 32.84s</title></circle>
+<circle cx="224.9" cy="441.2" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_009: 28.99s</title></circle>
+<circle cx="242.9" cy="434.8" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_010: 30.96s</title></circle>
+<circle cx="260.9" cy="218.8" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_011: 97.73s</title></circle>
+<circle cx="278.9" cy="255.2" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_012: 86.47s</title></circle>
+<circle cx="221.9" cy="345.8" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_013: 58.47s</title></circle>
+<circle cx="239.9" cy="302.5" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_014: 71.86s</title></circle>
+<circle cx="257.9" cy="298.4" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_015: 73.11s</title></circle>
+<circle cx="275.9" cy="327.8" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_016: 64.03s</title></circle>
+<circle cx="218.9" cy="207.1" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_017: 101.34s</title></circle>
+<circle cx="236.9" cy="338.1" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_018: 60.86s</title></circle>
+<circle cx="254.9" cy="353.8" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_019: 56.00s</title></circle>
+<circle cx="272.9" cy="354.0" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_020: 55.93s</title></circle>
+<circle cx="215.9" cy="193.3" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_021: 105.59s</title></circle>
+<circle cx="233.9" cy="273.9" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_022: 80.70s</title></circle>
+<circle cx="251.9" cy="305.6" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_023: 70.88s</title></circle>
+<circle cx="269.9" cy="348.4" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_024: 57.67s</title></circle>
+<circle cx="212.9" cy="196.7" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_025: 104.54s</title></circle>
+<circle cx="230.9" cy="299.8" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_026: 72.69s</title></circle>
+<circle cx="248.9" cy="285.3" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_027: 77.17s</title></circle>
+<circle cx="233.9" cy="286.0" r="4.5" fill="#1769aa" fill-opacity="0.62"><title>CIRCULAR_047: 76.95s</title></circle>
+<text x="248.9" y="561.0" text-anchor="middle" class="axis">printed (n=28)</text>
+<text x="248.9" y="322.0" text-anchor="middle" class="small">median 62.4s</text>
+<line x1="522.5" y1="426.2" x2="522.5" y2="142.3" stroke="#00856a" stroke-width="2"/>
+<line x1="498.5" y1="426.2" x2="546.5" y2="426.2" stroke="#00856a" stroke-width="2"/>
+<line x1="498.5" y1="142.3" x2="546.5" y2="142.3" stroke="#00856a" stroke-width="2"/>
+<rect x="474.5" y="251.6" width="96" height="89.2" fill="#00856a" fill-opacity="0.22" stroke="#00856a" stroke-width="2"/>
+<line x1="474.5" y1="285.9" x2="570.5" y2="285.9" stroke="#00856a" stroke-width="3"/>
+<circle cx="540.5" cy="320.1" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_028: 66.41s</title></circle>
+<circle cx="558.5" cy="425.2" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_029: 33.94s</title></circle>
+<circle cx="501.5" cy="424.7" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_030: 34.08s</title></circle>
+<circle cx="519.5" cy="401.0" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_031: 41.42s</title></circle>
+<circle cx="537.5" cy="426.2" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_032: 33.62s</title></circle>
+<circle cx="555.5" cy="334.9" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_033: 61.85s</title></circle>
+<circle cx="498.5" cy="284.0" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_034: 77.58s</title></circle>
+<circle cx="516.5" cy="337.1" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_035: 61.16s</title></circle>
+<circle cx="534.5" cy="280.6" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_036: 78.61s</title></circle>
+<circle cx="552.5" cy="342.1" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_037: 59.62s</title></circle>
+<circle cx="495.5" cy="142.3" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_038: 121.38s</title></circle>
+<circle cx="513.5" cy="232.3" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_039: 93.54s</title></circle>
+<circle cx="531.5" cy="249.1" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_040: 88.35s</title></circle>
+<circle cx="549.5" cy="200.6" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_041: 103.34s</title></circle>
+<circle cx="492.5" cy="287.9" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_042: 76.37s</title></circle>
+<circle cx="525.5" cy="151.6" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_048: 118.48s</title></circle>
+<circle cx="543.5" cy="259.1" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_049: 85.25s</title></circle>
+<circle cx="486.5" cy="276.8" r="4.5" fill="#00856a" fill-opacity="0.62"><title>CIRCULAR_050: 79.81s</title></circle>
+<text x="522.5" y="561.0" text-anchor="middle" class="axis">mixed (n=18)</text>
+<text x="522.5" y="274.9" text-anchor="middle" class="small">median 77.0s</text>
+<line x1="796.0999999999999" y1="346.4" x2="796.0999999999999" y2="307.4" stroke="#c05a00" stroke-width="2"/>
+<line x1="772.0999999999999" y1="346.4" x2="820.0999999999999" y2="346.4" stroke="#c05a00" stroke-width="2"/>
+<line x1="772.0999999999999" y1="307.4" x2="820.0999999999999" y2="307.4" stroke="#c05a00" stroke-width="2"/>
+<rect x="748.0999999999999" y="332.2" width="96" height="13.1" fill="#c05a00" fill-opacity="0.22" stroke="#c05a00" stroke-width="2"/>
+<line x1="748.0999999999999" y1="342.7" x2="844.0999999999999" y2="342.7" stroke="#c05a00" stroke-width="3"/>
+<circle cx="784.0999999999999" cy="346.4" r="4.5" fill="#c05a00" fill-opacity="0.62"><title>CIRCULAR_043: 58.27s</title></circle>
+<circle cx="802.0999999999999" cy="307.4" r="4.5" fill="#c05a00" fill-opacity="0.62"><title>CIRCULAR_044: 70.35s</title></circle>
+<circle cx="820.0999999999999" cy="340.5" r="4.5" fill="#c05a00" fill-opacity="0.62"><title>CIRCULAR_045: 60.11s</title></circle>
+<circle cx="763.0999999999999" cy="345.0" r="4.5" fill="#c05a00" fill-opacity="0.62"><title>CIRCULAR_046: 58.73s</title></circle>
+<text x="796.1" y="561.0" text-anchor="middle" class="axis">handwritten (n=4)</text>
+<text x="796.1" y="331.7" text-anchor="middle" class="small">median 59.4s</text>
+<text x="522.5" y="618.0" text-anchor="middle" class="axis">Document class from uploaded filename</text>
+<text x="25.0" y="308.5" text-anchor="middle" class="axis" transform="rotate(-90 25 308.5)">Seconds</text>
+</svg>

@@ -3,7 +3,7 @@ import json
 import shutil
 from pathlib import Path
 from typing import Optional, List, Dict, Any
-from datetime import datetime
+from datetime import datetime, timezone
 
 from ..core.config import settings
 from ..core.state import ProcessingState, is_state_unresolved
@@ -42,7 +42,15 @@ class StorageService:
                 return c.circular_id
         return None
 
-    def create_circular_folder(self, circular_id: str, original_filename: str, file_type: str, file_size: int, page_count: int = 1) -> Path:
+    def create_circular_folder(
+        self,
+        circular_id: str,
+        original_filename: str,
+        file_type: str,
+        file_size: int,
+        page_count: int = 1,
+        upload_received_at: Optional[str] = None,
+    ) -> Path:
         circ_dir = self.get_circular_dir(circular_id)
         circ_dir.mkdir(parents=True, exist_ok=True)
         
@@ -55,6 +63,7 @@ class StorageService:
             "page_count": page_count,
             "current_state": ProcessingState.UPLOADED.value,
             "created_at": now,
+            "upload_received_at": upload_received_at or now,
             "updated_at": now,
             "error_message": None,
             "summary": None,
@@ -67,6 +76,77 @@ class StorageService:
         }
         self.save_status(circular_id, status_data)
         return circ_dir
+
+    def save_recipient_identification_timing(
+        self,
+        circular_id: str,
+        completed_at: str,
+        duration_seconds: float,
+    ) -> None:
+        """Persist elapsed time from upload request receipt through recipient matching."""
+        status = self.load_status(circular_id) or {}
+        status["recipient_identification_completed_at"] = completed_at
+        status["upload_to_recipient_identification_seconds"] = round(max(0.0, duration_seconds), 3)
+        self.save_status(circular_id, status)
+
+    def start_email_routing_timing(self, circular_id: str, started_at: str) -> int:
+        """Record the start of an initial email dispatch or retry attempt."""
+        status = self.load_status(circular_id) or {}
+        attempt = int(status.get("email_routing_attempts", 0)) + 1
+        status["email_routing_attempts"] = attempt
+        status["email_routing_started_at"] = started_at
+        self.save_status(circular_id, status)
+        return attempt
+
+    def finish_email_routing_timing(
+        self,
+        circular_id: str,
+        started_at: str,
+        completed_at: str,
+        dispatch_duration_seconds: float,
+        outcome: str,
+        recipient_count: int,
+        sent_count: int,
+        failed_count: int,
+    ) -> None:
+        """Persist dispatch timing and upload-to-routing elapsed time for this attempt."""
+        status = self.load_status(circular_id) or {}
+        upload_timestamp = status.get("upload_received_at") or status.get("created_at")
+        upload_to_completion = None
+        try:
+            uploaded = datetime.fromisoformat(upload_timestamp)
+            completed = datetime.fromisoformat(completed_at)
+            if uploaded.tzinfo is None:
+                uploaded = uploaded.replace(tzinfo=timezone.utc)
+            if completed.tzinfo is None:
+                completed = completed.replace(tzinfo=timezone.utc)
+            upload_to_completion = max(0.0, (completed - uploaded).total_seconds())
+        except (TypeError, ValueError):
+            pass
+
+        run = {
+            "attempt": int(status.get("email_routing_attempts", 1)),
+            "started_at": started_at,
+            "completed_at": completed_at,
+            "dispatch_duration_seconds": round(max(0.0, dispatch_duration_seconds), 3),
+            "upload_to_completion_seconds": round(upload_to_completion, 3) if upload_to_completion is not None else None,
+            "outcome": outcome,
+            "recipient_count": recipient_count,
+            "sent_count": sent_count,
+            "failed_count": failed_count,
+        }
+        runs = status.get("email_routing_runs", [])
+        if not isinstance(runs, list):
+            runs = []
+        runs.append(run)
+        status["email_routing_runs"] = runs
+        status["email_routing_completed_at"] = completed_at
+        status["email_routing_duration_seconds"] = run["dispatch_duration_seconds"]
+        if upload_to_completion is not None:
+            status["upload_to_email_routing_seconds"] = run["upload_to_completion_seconds"]
+            if "upload_to_first_email_routing_seconds" not in status:
+                status["upload_to_first_email_routing_seconds"] = run["upload_to_completion_seconds"]
+        self.save_status(circular_id, status)
 
     def get_status_path(self, circular_id: str) -> Path:
         return self.get_circular_dir(circular_id) / "status.json"
@@ -217,6 +297,16 @@ class StorageService:
                     current_state=state,
                     created_at=status_data.get("created_at", ""),
                     updated_at=status_data.get("updated_at", ""),
+                    upload_received_at=status_data.get("upload_received_at"),
+                    recipient_identification_completed_at=status_data.get("recipient_identification_completed_at"),
+                    upload_to_recipient_identification_seconds=status_data.get("upload_to_recipient_identification_seconds"),
+                    email_routing_started_at=status_data.get("email_routing_started_at"),
+                    email_routing_completed_at=status_data.get("email_routing_completed_at"),
+                    email_routing_duration_seconds=status_data.get("email_routing_duration_seconds"),
+                    upload_to_email_routing_seconds=status_data.get("upload_to_email_routing_seconds"),
+                    upload_to_first_email_routing_seconds=status_data.get("upload_to_first_email_routing_seconds"),
+                    email_routing_attempts=status_data.get("email_routing_attempts", 0),
+                    email_routing_runs=status_data.get("email_routing_runs", []),
                     error_message=status_data.get("error_message"),
                     summary=status_data.get("summary"),
                     has_extracted_text=status_data.get("has_extracted_text", False),

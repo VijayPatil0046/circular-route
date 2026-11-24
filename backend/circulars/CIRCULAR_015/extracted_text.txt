@@ -1,7 +1,137 @@
---- PAGE 1 OF 1 ---
-toatlenoar
-a2:00Pm
-AllCR's ce nshructe tobepesent on time cuithout ail.
-Venue:Hop's office
-Copyto,
-2aid,Vijay Patil,Venkata chalaU
+--- PAGE 1 OF 2 ---
+RAMAIAH
+Institute of Technology
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1318/26–27
+06.11.2026
+CIRCULAR
+Subject: Annual Laboratory Equipment Calibration, Safety Compliance, and Stock Verifi-
+cation
+To ensure measurement accuracy, workplace safety, and transparent asset management across
+all academic and research laboratories, the Institute Asset Management & Safety Committee
+hereby initiates the Annual Laboratory Stock Verification and Equipment Calibration Drive for
+the financial year 2026–27. All Laboratory In-Charge faculty members and technical instructors
+must complete the verification procedures between 16.11.2026 and 30.11.2026.
+1. Scope of Physical Stock Verification
+Stock verification shall cover all capital assets, precision instruments, computing workstations,
+licensed software dongles, and consumable chemical/electronic inventories procured up to
+31.10.2026. Each asset must be physically inspected against the Central Asset Register (CAR)
+and verified for intact RFID/barcode tagging.
+Category
+Verification
+Require-
+ment
+Documentation
+Deadline
+Capital Machinery
+Operational test, serial
+number match
+Form SV-01
+23.11.2026
+Precision Instruments
+NABL-traceable calibra-
+tion validity check
+Calibration Cert.
+25.11.2026
+IT & Computing Assets
+Hardware specs, OS li-
+cense, antivirus status
+Form IT-04
+26.11.2026
+Unserviceable Items
+Identification
+for
+con-
+demnation/e-waste
+Form CW-02
+28.11.2026
+Consumables & Chemicals
+Expiry check, MSDS up-
+date, balance stock
+Stock Ledger
+30.11.2026
+2. Calibration of Testing and Measuring Equipment
+Precision instruments in Civil (Universal Testing Machines, Compression Testing Machines),
+Mechanical (CNC, Coordinate Measuring Machines, Dynamometers), ECE/EEE (Oscilloscopes,
+Spectrum Analyzers, High-Voltage Kits) must carry valid NABL-accredited calibration stickers.
+Equipment whose calibration expires before March 2027 must be listed in the consolidated
+calibration requisition and forwarded to the Central Purchase Officer by 25.11.2026.
+3. Laboratory Safety and Statutory Compliance
+During the audit, the Safety Sub-Committee will inspect every laboratory for the following
+mandatory safeguards:
+• Functional ABC/CO2 fire extinguishers with pressure gauges in the green zone and valid
+refill tags.
+• Well-stocked First-Aid boxes with non-expired antiseptics, burn dressings, and emergency
+19
+
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTU)
+(ApprovedbyAICTE,NewDelhi&Govt.of
+Accredited by NBA &NAACwith'A+'Grade
+Ref.No.:1318/26-27
+To ensure measurementaccuracy,workplace safety,and transparentasset management across
+the financial year 2026-27.All Laboratory In-Charge faculty members and technicalinstructors
+Require- Documentation
+Operational test, serial Form SV-01
+NABL-traceable calibra-Calibration Cert.
+tionvaliditycheck
+Hardware specs, OS li- Form IT-04
+cense,antivirusstatus
+UnserviceableItems
+Identificationfor con-Form CW-02
+Consumables&Chemicals
+Expiry check, MSDS up- Stock Ledger
+date,balancestock
+· Functional ABC/CO2 fire extinguishers with pressure gauges in the green zone and valid
+· Well-stocked First-Aid boxes with non-expired antiseptics, burn dressings, and emergency
+
+--- PAGE 2 OF 2 ---
+contact numbers.
+• Proper earthing verification on high-power electrical panels, rubber insulating mats, and
+ELCB/RCCB trip tests.
+• Clearly labeled hazardous waste disposal bins (e-waste, chemical residues, sharp metal
+scrap) kept away from exit corridors.
+4. Condemnation and E-Waste Disposal
+Obsolete computers, irreparable oscilloscopes, and damaged furniture cluttering laboratory
+corridors must be segregated and documented in Form CW-02. Upon approval by the Condem-
+nation Committee, electronic waste shall be disposed of exclusively through KSPCB-authorized
+e-waste recyclers in accordance with statutory environmental norms.
+5. Submission of Final Verification Certificate
+Inter-departmental verification officers will co-sign the physical stock registers alongside the
+respective Lab In-Charges. Consolidated department reports must reach the Registrar’s office
+on or before 02.12.2026.
+Registrar
+Registrar (Administration)
+M.S. Ramaiah Institute of Technology
+(Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
+(Autonomous Institute Affiliated to VTU)
+BENGALURU – 560 054
+Copy to:
+1. Dr Abhishek, Electronics & Communication Engineering
+2. L. Narayan, Electrical & Electronics Engineering
+3. Dr. Rohan Malhotra, Mechanical Engineering
+4. Prof Deepa, Civil Engineering
+5. Sanjay P, Computer Science & Engineering
+6. Central Purchase Officer & Estate Officer
+20
+
+[Extracted Annotations / Remarks]
+· Proper earthing verification on high-power electrical panels, rubber insulating mats, and
+· Clearly labeled hazardous waste disposal bins (e-waste, chemical residues, sharp metal
+4.Condemnation and E-Waste Disposal
+corridors must be segregated and documented in Form CW-02. Upon approval bythe Condem-
+5.Submission of Final Verification Certificate
+respective Lab In-Charges. Consolidated department reports must reach the Registrar's office
+on orbefore02.12.2026.
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstitute Affiliated to VTU)
+BENGALURU-560054
+Bengaluru-560 054
+6.CentralPurchaseOfficer&Estate Officer

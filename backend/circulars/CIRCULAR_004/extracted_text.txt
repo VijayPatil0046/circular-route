@@ -1,39 +1,49 @@
 --- PAGE 1 OF 1 ---
 RAMAIAH
-(Autonomous Institute, Affliated to VTU)
-(Approved by AICTE,NewDelhi&Govt.of Karnataka)
 Institute of Technology
-AccreditedbyNBA&NAACwithA+'Grade
-Ref.No.:1301/26-27
-06.10.2026
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1307/26–27
+24.10.2026
 CIRCULAR
-Subject: Department Technical Talk on "Generative AI in Industry"
-The Department of Computer Science and Engineering is organizing a
-technical talk on "Generative AI in Industry" for all CSE students.
-Date
-: 10.10.2026 (Saturday)
-Time
-: 11:00 AM - 12:30 PM
-Venue
-: CSE Seminar Hall (Room No. C-204)
-Speaker
-: Mr. Rahul Deshpande
-Senior AI Engineer, Microsoft
-All CSE students are required to attend the session and benefit from the
-discussion on real-world applications and career opportunities in Generative AI.
-G.S. Puasaol
-ControllerofExaminations
-Principal
-ControllerofExaminations
-PRINCIPAL
+Subject: Mandatory Wearing of Identity Cards inside Campus Premises
+It has been observed that several students and a few staff members are entering the cam-
+pus and academic blocks without visibly wearing their institutional Identity Cards. In order to
+strengthen campus security and maintain discipline during the examination season, all stu-
+dents, faculty, and non-teaching staff are strictly instructed to wear their ID cards at all times
+within the campus premises.
+Security personnel at the main gate, library entrance, and examination halls have been di-
+rected to verify ID cards thoroughly. Students who have lost or damaged their ID cards must
+immediately apply for a duplicate card at the Student Section before 29.10.2026. Entry to ex-
+amination halls will not be permitted without a valid ID card and signed hall ticket.
+Dean (Student Affairs)
+Dean – Student Affairs
 M.S. Ramaiah Institute of Technology
-RAMAIAHINSTITUTEOFTECHNOLOGY
 (Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
 (Autonomous Institute Affiliated to VTU)
-Bengaluru - 54
+BENGALURU – 560 054
+Copy to:
+1. Naveen G, Mechanical Engineering
+2. Dr Pooja Desai, Civil Engineering
+3. Dr. Vikram Joshi, Professor & HOD, CSE
+4. K. Ramesh, Information Science & Engineering
+5. Chief Security Officer, RIT Campus
+4
+
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTu)
+(Approved by AICTE,New Delhi&Govt.of
+Accreditedby NBA&NAACwithA+'Grade
+Ref.No.:1307/26-27
+Dean-StudentAffairs
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstituteAffiliated toVTU)
+Bengaluru-560054
 BENGALURU-560054
-Copy To:
-Vijay Patil
-Venkatachala V
-Susesh Kumax P, Kisan S
-Vijay V Patil
+3.Dr.VikramJoshi,Professor &HOD, CSE

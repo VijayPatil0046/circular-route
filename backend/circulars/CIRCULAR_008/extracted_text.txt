@@ -1,39 +1,51 @@
 --- PAGE 1 OF 1 ---
 RAMAIAH
-(Autonomous Institute, Affliated to VTU)
-(Approved by AICTE,NewDelhi&Govt.of Karnataka)
 Institute of Technology
-AccreditedbyNBA&NAACwithA+'Grade
-Ref.No.:1301/26-27
-06.10.2026
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1311/26–27
+29.10.2026
 CIRCULAR
-Subject: Department Technical Talk on "Generative AI in Industry"
-The Department of Computer Science and Engineering is organizing a
-technical talk on "Generative AI in Industry" for all CSE students.
-Date
-: 10.10.2026 (Saturday)
-Time
-: 11:00 AM - 12:30 PM
-Venue
-: CSE Seminar Hall (Room No. C-204)
-Speaker
-: Mr. Rahul Deshpande
-Senior AI Engineer, Microsoft
-All CSE students are required to attend the session and benefit from the
-discussion on real-world applications and career opportunities in Generative AI.
-G.S. Puasaol
-ControllerofExaminations
-Principal
-ControllerofExaminations
-PRINCIPAL
+Subject: Distribution of Hall Tickets for Odd Semester End Examinations (SEE)
+Students who have fulfilled the mandatory attendance requirement (minimum 85%, or 75%
+with approved medical condonation) and minimum CIE eligibility criteria may collect their au-
+thenticated SEE Hall Tickets from their respective department offices between 04.11.2026 and
+07.11.2026 during working hours (9:30 AM to 4:00 PM).
+Students must clear all pending library fines, laboratory breakage dues, and tuition fee bal-
+ances prior to collecting their hall tickets. Any discrepancy in subject codes, candidate name,
+or USN printed on the hall ticket must be brought to the immediate notice of the Controller of
+Examinations office on or before 08.11.2026.
+G. S. Prasad
+Controller of Examinations
 M.S. Ramaiah Institute of Technology
-RAMAIAHINSTITUTEOFTECHNOLOGY
 (Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
 (Autonomous Institute Affiliated to VTU)
-Bengaluru - 54
+BENGALURU – 560 054
+Copy to:
+1. Deepa S, Civil Engineering
+2. Dr Sanjay, Computer Science & Engineering
+3. Ritu C, Information Science & Engineering
+4. Dr Gopalakrishnan, Electronics & Communication Engineering
+5. All Department Notice Boards
+8
+
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTU)
+Accreditedby NBA&NAACwithA+'Grade
+Ref.No.:1311/26-27
+Subject:Distribution of Hall Tickets for Odd Semester End Examinations(SEE)
+07.11.2026duringworkinghours(9:30AMto4:00PM).
+Examinationsofficeonorbefore08.11.2026.
+G.S. Prasad
+ControllerofExaminations
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstituteAffiliated toVTU)
+Bengaluru-560054
 BENGALURU-560054
-Copy To:
-Vijay Patil
-Venkatachala V
-Susesh Kumax P, Kisan S
-Vijay V Patil
+4.Dr Gopalakrishnan, Electronics & Communication Engineering

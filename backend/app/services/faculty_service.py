@@ -21,7 +21,8 @@ EXCLUDED_ROLES = {
     "head of department", "hod", "head of the department", "accounts section",
     "library", "librarian", "sports department", "administrative officer", "ao",
     "notice board", "all faculty", "all staff", "examination section", "establishment section",
-    "chief warden", "placement officer", "estate officer"
+    "chief warden", "placement officer", "estate officer", "file", "file copy", "office copy",
+    "all deputy chief superintendents", "exam control room", "cse", "ise", "ece", "eee"
 }
 
 class FacultyService:
@@ -136,6 +137,8 @@ class FacultyService:
         cleaned = normalize_name(text)
         if cleaned in EXCLUDED_ROLES:
             return True
+        if cleaned.endswith((" engineering", " science", " department", " dept")):
+            return True
         for role in EXCLUDED_ROLES:
             if cleaned == role or cleaned.startswith(f"{role} ") or cleaned.endswith(f" {role}"):
                 words = cleaned.split()
@@ -179,9 +182,17 @@ class FacultyService:
 
         # Remove numbering like '1.', '1)', 'i.', '(a)', bullets
         cleaned = re.sub(r'^\s*(?:\d+[\.\)]|[a-zA-Z][\.\)]|\-|\*|\•)\s*', '', line)
+        cleaned = re.sub(r'\s*\[(?:handwritten|ocr)\]\s*$', '', cleaned, flags=re.IGNORECASE)
 
-        # Remove trailing department designations from the person's name (e.g. ", Department of CSE", ", CSE Dept")
-        cleaned = re.sub(r',\s*(?:Department\s+of\s+[A-Za-z\s&]+|[A-Za-z\s&]+\s+Dept\.?|Assistant\s+Professor|Associate\s+Professor|Professor|Dean[a-z\s]*|HOD[a-z\s]*)', '', cleaned, flags=re.IGNORECASE)
+        # Remove the affiliation after a recipient name (e.g. ", Computer Science & Engineering").
+        cleaned = re.sub(
+            r',\s*(?:[A-Za-z&]+(?:[\s&]+[A-Za-z&]+){0,5}\s+(?:Engineering|Science)|CSE|ISE|ECE|EEE|'
+            r'Department\s+of\s+[A-Za-z\s&]+|[A-Za-z\s&]+\s+Dept\.?|'
+            r'Assistant\s+Professor|Associate\s+Professor|Professor|Dean[a-z\s]*|HOD[a-z\s]*)\s*$',
+            '',
+            cleaned,
+            flags=re.IGNORECASE,
+        )
 
         # Split remaining by semicolon, 'and', '&'
         parts = re.split(r'[;]|\band\b|&', cleaned)
@@ -226,16 +237,21 @@ class FacultyService:
         # ---------------------------------------------------------
         # STAGE 1: Extract recipient sections and candidate names
         # ---------------------------------------------------------
-        if llm_available:
+        extracted_candidates, sections_info = self.extract_candidates_from_text(document_text)
+
+        # If the document has explicit recipient sections, trust their structured
+        # rows over whole-document LLM guesses. Use the LLM only for nonstandard
+        # layouts where local parsing found no recipient section at all.
+        if not extracted_candidates and not sections_info.get("has_recipient_section") and llm_available:
             try:
-                logger.info("Executing LLM Call 1: Extracting 'To' / 'Copy To' recipient sections...")
+                logger.info("Executing LLM Call 1 fallback: Extracting nonstandard recipient sections...")
                 extracted_candidates, sections_info, llm_summary = self._call_groq_stage1_extract_recipients(document_text)
             except Exception as e:
                 logger.error(f"Error in LLM Call 1 ({e}). Falling back to local regex extraction.")
                 extracted_candidates = []
 
         if not extracted_candidates:
-            # Local fallback for Stage 1
+            # Keep the local parser as the final fallback when the LLM is unavailable.
             extracted_candidates, sections_info = self.extract_candidates_from_text(document_text)
 
         if not extracted_candidates:

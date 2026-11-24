@@ -1,22 +1,79 @@
+--- PAGE 1 OF 1 ---
+RAMAIAH
+Institute of Technology
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1308/26–27
+26.10.2026
+CIRCULAR
+Subject: Rescheduling of Practical Laboratory Examinations (ECE & EEE Departments)
+Due to scheduled high-tension electrical feeder maintenance by BESCOM in the Mathikere sub-
+division on 04.11.2026, the Semester End Practical Laboratory Examinations originally sched-
+uled for the Electronics & Communication Engineering and Electrical & Electronics Engineering
+departments on that date have been rescheduled as follows:
+Dept.
+Laboratory Course
+Original Date
+Revised Date
+ECE
+Analog
+&
+Digital
+Circuits
+Lab
+(EC506L)
+04.11.2026
+06.11.2026 (9:00 AM)
+ECE
+Microcontrollers Lab (EC507L)
+04.11.2026
+06.11.2026 (2:00 PM)
+EEE
+Power Electronics Lab (EE506L)
+04.11.2026
+07.11.2026 (9:00 AM)
+EEE
+Control Systems Lab (EE507L)
+04.11.2026
+07.11.2026 (2:00 PM)
+Batch allocations and assigned internal/external examiners remain unchanged. Department
+heads are requested to notify the respective student batches immediately.
+G. S. Prasad
+Controller of Examinations
+M.S. Ramaiah Institute of Technology
+(Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
+(Autonomous Institute Affiliated to VTU)
+BENGALURU – 560 054
+Copy to:
+1. Harish B, Electronics & Communication Engineering
+2. Prof. Nisha Pillai, Electrical & Electronics Engineering
+3. Dr Anil, Electronics & Communication Engineering
+4. Lakshmi N, Electrical & Electronics Engineering
+5. Maintenance Engineer, Estate Office
+5
 
-NATIONAL INSTITUTE OF ENGINEERING & TECHNOLOGY
-OFFICE OF THE PRINCIPAL
-
-Ref: NIET/CIR/2026/088
-Date: 17 November 2026
-
-CIRCULAR: ANNUAL SYLLABUS REVISION COMMITTEE
-
-To:
-1. Dr. Seema S., Department of CSE
-2. Prof. Rajesh Kumar, Department of CSE
-3. Dr. Anand Kulkarni, ISE Dept
-
-Copy To:
-Office of the Principal
-Office of the Registrar
-Head of Department, CSE
-
-All the above nominated faculty members are requested to review the revised curriculum guidelines
-and submit their feedback before Friday, 28th November 2026.
-    
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTU)
+Accredited by NBA &NAACwithA+'Grade
+Ref.No.:1308/26-27
+Subject:Rescheduling of Practical Laboratory Examinations(ECE& EEE Departments)
+Due toscheduled high-tension electrical feeder maintenance by BESCOM in the Mathikere sub-
+departments on that date havebeen rescheduled as follows:
+Dept. Laboratory Course
+Original DateRevised Date
+Analog&DigitalCircuitsLab04.11.2026
+PowerElectronics Lab (EE506L)
+Controller ofExaminations
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstituteAffiliated toVTU)
+Bengaluru-560 054
+BENGALURU-560054
+3.Dr Anil, Electronics & Communication Engineering
+4.Lakshmi N, Electrical & Electronics Engineering
+5.Maintenance Engineer, Estate Office

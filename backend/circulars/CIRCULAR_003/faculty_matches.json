@@ -1,1 +1,62 @@
-[]
+[
+  {
+    "original_reference": "Dr. Rahul Verma",
+    "standard_name": "Dr. Rahul Verma",
+    "faculty_id": "FAC107",
+    "department": "Computer Science & Engineering",
+    "email": "vijaypatilcode@gmail.com",
+    "similarity_score": 1.0,
+    "matching_explanation": "Exact match with standard name and highest embedding similarity score.",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "Meera I",
+    "standard_name": "Prof. Meera Iyer",
+    "faculty_id": "FAC108",
+    "department": "Information Science & Engineering",
+    "email": "vijaypatilcode@gmail.com",
+    "similarity_score": 0.99,
+    "matching_explanation": "Matches alias 'Meera I' exactly; high embedding similarity confirms identity.",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "S Kulkarni",
+    "standard_name": "Dr. Sandeep Kulkarni",
+    "faculty_id": "FAC109",
+    "department": "Electronics & Communication Engineering",
+    "email": "vijaypatilcode@gmail.com",
+    "similarity_score": 0.99,
+    "matching_explanation": "Matches alias 'S Kulkarni' exactly; high embedding similarity confirms identity.",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  },
+  {
+    "original_reference": "Prof Aishwarya",
+    "standard_name": "Prof. Aishwarya Shetty",
+    "faculty_id": "FAC110",
+    "department": "Electrical & Electronics Engineering",
+    "email": "vijaypatilcode@gmail.com",
+    "similarity_score": 0.99,
+    "matching_explanation": "Matches alias 'Prof Aishwarya' exactly; high embedding similarity confirms identity.",
+    "supporting_evidence": "Found in Copy To section.",
+    "relevance_explanation": "Designated recipient in Copy To section.",
+    "section_found": "Copy To",
+    "verification_status": "AUTO_VERIFIED",
+    "is_verified": true,
+    "manual_override": false
+  }
+]

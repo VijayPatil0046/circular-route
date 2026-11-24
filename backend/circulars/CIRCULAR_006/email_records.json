@@ -1,26 +1,50 @@
 [
   {
-    "recipient_id": "REC_911d2f5f",
-    "faculty_id": "FAC001",
-    "standard_name": "Dr. Seema S.",
-    "email": "seema.cs@institution.edu",
-    "status": "FAILED",
-    "resend_message_id": null,
-    "sent_at": null,
-    "error_message": "HTTPSConnectionPool(host='api.resend.com', port=443): Max retries exceeded with url: /emails (Caused by NameResolutionError(\"HTTPSConnection(host='api.resend.com', port=443): Failed to resolve 'api.resend.com' ([Errno 11001] getaddrinfo failed)\"))",
+    "recipient_id": "REC_be0cbc75",
+    "faculty_id": "FAC117",
+    "standard_name": "Dr. Prakash Hegde",
+    "email": "vijaypatilcode@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ff80-abe7-73b7-aa3c-8903fe4f31f0",
+    "sent_at": "2026-11-22T00:36:30.480306",
+    "error_message": null,
     "retry_count": 1,
-    "idempotency_key": "CIRCULAR_006_FAC001_95f0bf"
+    "idempotency_key": "CIRCULAR_006_FAC117_6e8e3e"
   },
   {
-    "recipient_id": "REC_d389f878",
-    "faculty_id": "FAC002",
-    "standard_name": "Prof. Rajesh Kumar",
-    "email": "rajesh.kumar@institution.edu",
-    "status": "FAILED",
-    "resend_message_id": null,
-    "sent_at": null,
-    "error_message": "HTTPSConnectionPool(host='api.resend.com', port=443): Max retries exceeded with url: /emails (Caused by NameResolutionError(\"HTTPSConnection(host='api.resend.com', port=443): Failed to resolve 'api.resend.com' ([Errno 11001] getaddrinfo failed)\"))",
+    "recipient_id": "REC_dfacfce2",
+    "faculty_id": "FAC118",
+    "standard_name": "Prof. Ananya Krishnan",
+    "email": "vijaypatilcode@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ff80-abd6-773f-ad68-ede313035cc3",
+    "sent_at": "2026-11-22T00:36:30.859463",
+    "error_message": null,
     "retry_count": 1,
-    "idempotency_key": "CIRCULAR_006_FAC002_53ef08"
+    "idempotency_key": "CIRCULAR_006_FAC118_69b7db"
+  },
+  {
+    "recipient_id": "REC_466fbba6",
+    "faculty_id": "FAC119",
+    "standard_name": "Dr. Mohan Raj",
+    "email": "vijaypatilcode@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ff80-ab8a-74c8-a515-66a4a2e7a1d2",
+    "sent_at": "2026-11-22T00:36:30.376170",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_006_FAC119_6894a7"
+  },
+  {
+    "recipient_id": "REC_7cb2809e",
+    "faculty_id": "FAC120",
+    "standard_name": "Prof. Swathi Narayan",
+    "email": "vijaypatilcode@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ff80-b04a-7c12-9ab3-fd1190609994",
+    "sent_at": "2026-11-22T00:36:31.629309",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_006_FAC120_e688d9"
   }
 ]

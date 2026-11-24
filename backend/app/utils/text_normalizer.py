@@ -129,6 +129,26 @@ def extract_recipient_sections(text: str) -> dict:
                 # Blank lines might signal section end if followed by paragraphs
                 pass
             continue
+
+        if re.match(r"^---\s*PAGE\s+\d+\s+OF\s+\d+\s*---$", stripped, re.IGNORECASE):
+            continue
+        if stripped.lower().startswith("[handwritten copy to additions]"):
+            current_section = "copy_to"
+            continue
+        if stripped.lower().startswith("[handwritten to additions]"):
+            current_section = "to"
+            continue
+        if stripped.startswith("[Extracted Annotations"):
+            current_section = None
+            continue
+
+        if current_section == "copy_to" and re.match(
+            r"^(?:rit\s+circulars\b|circular\s+\d+\s+of\s+\d+\b|page\s+\d+\b)",
+            stripped,
+            re.IGNORECASE,
+        ):
+            current_section = None
+            continue
             
         if to_pattern.match(stripped):
             current_section = "to"

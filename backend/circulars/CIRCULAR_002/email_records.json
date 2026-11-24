@@ -1,38 +1,50 @@
 [
   {
-    "recipient_id": "REC_a662ffb7",
-    "faculty_id": "FAC021",
-    "standard_name": "Vijay Patil",
-    "email": "vijaypatil00046@gmail.com",
+    "recipient_id": "REC_0264b2cc",
+    "faculty_id": "FAC104",
+    "standard_name": "Prof. Sneha Rao",
+    "email": "vijaypatilcode@gmail.com",
     "status": "SENT",
-    "resend_message_id": "01a1e9ea-e67f-706b-8fc1-0fe4e97f7068",
-    "sent_at": "2026-11-17T20:00:50.614683",
+    "resend_message_id": "01a1ff7c-374a-7b15-8eb3-984421ec3ed5",
+    "sent_at": "2026-11-22T00:31:38.651353",
     "error_message": null,
     "retry_count": 1,
-    "idempotency_key": "CIRCULAR_002_FAC021_5dd57e"
+    "idempotency_key": "CIRCULAR_002_FAC104_7c1667"
   },
   {
-    "recipient_id": "REC_206ab4f1",
-    "faculty_id": "FAC022",
-    "standard_name": "Venkatachala V",
-    "email": "venkatachalavenku029@gmail.com",
+    "recipient_id": "REC_d69a8451",
+    "faculty_id": "FAC105",
+    "standard_name": "Dr. Karthik Nair",
+    "email": "vijaypatilcode@gmail.com",
     "status": "SENT",
-    "resend_message_id": "01a1e9ea-f3ad-7f3c-898e-ecdeb7181d51",
-    "sent_at": "2026-11-17T20:00:54.198108",
+    "resend_message_id": "01a1ff7c-3733-7b8c-9087-d06133e43c42",
+    "sent_at": "2026-11-22T00:31:38.637354",
     "error_message": null,
     "retry_count": 1,
-    "idempotency_key": "CIRCULAR_002_FAC022_0b5319"
+    "idempotency_key": "CIRCULAR_002_FAC105_2e32e1"
   },
   {
-    "recipient_id": "REC_71d5f1e1",
-    "faculty_id": "FAC025",
-    "standard_name": "Kiran S",
-    "email": "vijayvpatil13@gmail.com",
+    "recipient_id": "REC_21f974df",
+    "faculty_id": "FAC106",
+    "standard_name": "Prof. Divya Menon",
+    "email": "vijaypatilcode@gmail.com",
     "status": "SENT",
-    "resend_message_id": "01a1e9eb-047a-795d-b8c7-e44114a93c5c",
-    "sent_at": "2026-11-17T20:00:59.328948",
+    "resend_message_id": "01a1ff7c-3703-71d8-8b35-18a7359650b7",
+    "sent_at": "2026-11-22T00:31:38.562354",
     "error_message": null,
     "retry_count": 1,
-    "idempotency_key": "CIRCULAR_002_FAC025_716b8f"
+    "idempotency_key": "CIRCULAR_002_FAC106_8bbcad"
+  },
+  {
+    "recipient_id": "REC_ec8a9890",
+    "faculty_id": "FAC113",
+    "standard_name": "Dr. Vikram Joshi",
+    "email": "vijaypatilcode@gmail.com",
+    "status": "SENT",
+    "resend_message_id": "01a1ff7c-3706-7b29-b748-53bb833c424e",
+    "sent_at": "2026-11-22T00:31:38.616352",
+    "error_message": null,
+    "retry_count": 1,
+    "idempotency_key": "CIRCULAR_002_FAC113_9329f3"
   }
 ]

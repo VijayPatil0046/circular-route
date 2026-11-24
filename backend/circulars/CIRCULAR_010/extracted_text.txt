@@ -1,39 +1,49 @@
 --- PAGE 1 OF 1 ---
 RAMAIAH
-(Autonomous Institute, Affliated to VTU)
-(Approved by AICTE,NewDelhi&Govt.of Karnataka)
 Institute of Technology
-AccreditedbyNBA&NAACwithA+'Grade
-Ref.No.:1301/26-27
-06.10.2026
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1313/26–27
+31.10.2026
 CIRCULAR
-Subject: Department Technical Talk on "Generative AI in Industry"
-The Department of Computer Science and Engineering is organizing a
-technical talk on "Generative AI in Industry" for all CSE students.
-Date
-: 10.10.2026 (Saturday)
-Time
-: 11:00 AM - 12:30 PM
-Venue
-: CSE Seminar Hall (Room No. C-204)
-Speaker
-: Mr. Rahul Deshpande
-Senior AI Engineer, Microsoft
-All CSE students are required to attend the session and benefit from the
-discussion on real-world applications and career opportunities in Generative AI.
-G.S. Puasaol
-ControllerofExaminations
-Principal
-ControllerofExaminations
-PRINCIPAL
+Subject: Voluntary Blood Donation Camp Organized by RIT NSS Unit
+The National Service Scheme (NSS) Unit of Ramaiah Institute of Technology, in collaboration
+with M.S. Ramaiah Medical College Blood Bank and Indian Red Cross Society, is organizing a
+Voluntary Blood Donation Camp on 12.11.2026 from 9:30 AM to 3:30 PM at the ESB Foyer.
+All eligible students, faculty members, and staff are warmly invited to participate in this noble
+humanitarian cause. Medical screening, donor refreshments, and official appreciation certifi-
+cates will be provided to all donors. Faculty coordinators are requested to encourage student
+participation without disrupting scheduled examination activities.
+NSS Program Officer
+Dean – Student Welfare
 M.S. Ramaiah Institute of Technology
-RAMAIAHINSTITUTEOFTECHNOLOGY
 (Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
 (Autonomous Institute Affiliated to VTU)
-Bengaluru - 54
+BENGALURU – 560 054
+Copy to:
+1. Dr. A. Reddy, Computer Science & Engineering
+2. P Sharma, Information Science & Engineering
+3. Sneha R, Electrical & Electronics Engineering
+4. Karthik N, Mechanical Engineering
+5. Divya M, Civil Engineering
+10
+
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTU)
+(Approvedby AICTE,NewDelhi&Govt.of
+Accreditedby NBA&NAACwithA+'Grade
+Ref.No.:1313/26-27
+Subject:Voluntary Blood Donation Camp Organized by RIT NSS Unit
+Alleligible students,faculty members, and staff are warmlyinvited toparticipate in thisnoble
+Dean-StudentWelfare
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstituteAffiliated toVTU)
+Bengaluru-560054
 BENGALURU-560054
-Copy To:
-Vijay Patil
-Venkatachala V
-Susesh Kumax P, Kisan S
-Vijay V Patil
+3.Sneha R, Electrical & Electronics Engineering

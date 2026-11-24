@@ -1,45 +1,128 @@
---- PAGE 1 OF 1 ---
-Word2Vee is a Nanural Language Processing (NLP) technique used to convert words into
-1.Introduction
-numerical vectors (word embeddings) that capture semantic and contextual relationships
-beneenwordsUnlike traditional textrepresentation techniques suchasBagofWords andTF-
-IDF.Word2Vecleams densevector representations by analyzing the context in which words
-In this experimenta customWord2Vee model was trained using a domain-specificmedical
-appear.
-corpus collected from Wikipedia medical articles.The objectivewas to understand how word
-embeddingscapurrlationhipweenmedial trmssuhasdiseasesrugsrganan
-diagnostic procedures.
-Two Word2Vec architectures,Skip-Gram and Continuous Bag of Words (CBOW).were
-trainedandevauatdheiormancewaanalyzeduinearesteighbor similarityword
-analogielstoheionamanrankrrlationandvisualiatn
-This experiment demonstrates how domain-specific training enables a model to learn
-meaningful relationships within a specialized field such as healthcare andmedicine.
-2.Objective
-Train a custom Word2Vecmodel on a small dataset. Train embeddings on a domainspecific
-corpus (e.g legal. medical) and analyze how embeddings capture domainspecific semantics.
-3.Tools and Technologies
-Tool/Technology
-Purpose
-Python
-Main programming language
-Gensim
-Word2Vecmodel training and embeddinggeneration
-NumPy
-Numerical computations and vector operations
-Scikit-learm
-t-SNE dimensionality reduction
-Matplotlib
-Visualization ofword embeddings
-SciPy
-Spearman rank correlation calculation
-Requests
-Downloadingmedical articlesfrom Wikipedia
-Text cleaning and tokenization
-Regular Expressions (re)
-vs Code
-Development environment
-4.Methodology
-The implementationfollowsasequenceof stepsstartingfrommedical corpuscollectionand
-ending with semantic evaluation and visualization.
-Copi  to
-Venkatachala V,Vijay Pail
+--- PAGE 1 OF 2 ---
+RAMAIAH
+Institute of Technology
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1320/26–27
+09.11.2026
+CIRCULAR
+Subject: Industry-Academia Advisory Board Meeting and Curriculum Feedback Process
+As part of our continuous curriculum enrichment under the Autonomous 2026 Scheme, all
+engineering departments are scheduled to convene their half-yearly Industry-Academia Ad-
+visory Board (IAAB) meetings between 23.11.2026 and 04.12.2026. The objective of these
+deliberations is to align program electives, laboratory experiments, and skill-enhancement
+modules with emerging industry practices and National Education Policy (NEP 2020) multi-
+disciplinary frameworks.
+1. Structured Agenda for IAAB Deliberations
+Heads of Departments and Board of Studies (BoS) Conveners must circulate the draft curricu-
+lum dossier to external industry experts and alumni representatives at least ten days ahead of
+the meeting. Each IAAB session must formally record recommendations across the following
+five agenda items:
+Item
+Agenda Topic
+Expected Output
+1
+Review of 2026 Scheme Core & Elective
+Syllabi
+Gap identification and outdated topic
+pruning
+2
+Industry-Delivered
+1-Credit
+Micro-
+Modules
+Identification of visiting industry practi-
+tioners
+3
+Modernization
+of
+Lab
+Experiments
+&
+Toolchains
+Transition to cloud, open-source, and HIL
+tools
+4
+Internship & Capstone Problem State-
+ments
+Bank of 20+ live industry problem state-
+ments
+5
+Stakeholder Feedback Analysis (Alumni &
+Employers)
+Actionable inputs for upcoming BoS meet-
+ing
+2. Stakeholder Feedback Collection Protocol
+Prior to the IAAB meeting, departments must synthesize structured feedback collected during
+the current semester from four stakeholder groups: graduating students, alumni (3–5 years
+post-graduation), recruiting employers, and parents. Feedback responses should be tabulated
+quantitatively on a 5-point Likert scale mapped to Program Educational Objectives (PEOs) and
+Program Specific Outcomes (PSOs). Qualitative observations regarding communication skills,
+system debugging, and project management must be explicitly highlighted.
+3. Industry Expert Honorarium and Hospitality
+External industry members attending the IAAB meeting in person are entitled to sitting hon-
+orarium and local conveyance reimbursement as per approved institutional norms. Virtual
+participation via secure video conferencing may be arranged for international or outstation
+experts. Departments must submit the list of confirmed invitees to the Registrar’s office five
+working days prior to the meeting for hospitality arrangements.
+4. Minutes of Meeting and BoS Integration
+23
+
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTU)
+(Approved byAICTE,NewDelhi&Govt.of
+Accreditedby NBA&NAACwith'A+'Grade
+Ref.No.:1320/26-27
+As part of our continuous curriculum enrichment under the Autonomous2026Scheme,all
+disciplinaryframeworks.
+1.StructuredAgendaforIAABDeliberations
+Review of 2026 SchemeCore& Elective
+Industry-Delivered   1-Credit
+Micro- Identification of visiting industry practi-
+Modernizationof LabExperiments&
+Internship&CapstoneProblemState-
+Actionable inputsfor upcoming BoS meet-
+2.StakeholderFeedbackCollectionProtocol
+the current semester from four stakeholder groups:graduating students,alumni(3-5 years
+ProgramSpecificOutcomes(PsOs).Qualitativeobservationsregardingcommunicationskills,
+3.Industry Expert Honorarium and Hospitality
+experts. Departments must submit the list of confirmed invitees to the Registrar's office five
+
+--- PAGE 2 OF 2 ---
+Detailed Minutes of the Meeting (MoM), signed by the Chairperson and all attending members,
+must be compiled within four working days of the meeting. Recommendations requiring syl-
+labus revision or introduction of new open electives must be structured into formal Agenda
+Notes for placement before the statutory Board of Studies (BoS) scheduled in January 2027.
+5. Documentation for Accreditation
+Copies of invitation letters, expert profiles, attendance sheets, geo-tagged photographs, stake-
+holder feedback summaries, and signed MoMs must be archived in the departmental Accred-
+itation Repository and uploaded to the IQAC shared drive by 10.12.2026.
+Dean (Academics)
+Dean – Academic Affairs
+M.S. Ramaiah Institute of Technology
+(Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
+(Autonomous Institute Affiliated to VTU)
+BENGALURU – 560 054
+Copy to:
+1. Dr Arjun, Computer Science & Engineering
+2. P. Sharma, Information Science & Engineering
+3. Prof Anil Kumar, Electronics & Communication Engineering
+4. Prof Sneha, Electrical & Electronics Engineering
+5. K. Nair, Mechanical Engineering
+6. Chairperson, Board of Studies (All Departments)
+24
+
+[Extracted Annotations / Remarks]
+5.Documentation for Accreditation
+Dean-AcademicAffairs
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstituteAffiliated toVTU)
+Bengaluru-560 054
+BENGALURU-560054
+3.Prof Anil Kumar, Electronics & Communication Engineering

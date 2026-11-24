@@ -2,10 +2,11 @@ import base64
 import logging
 import uuid
 import threading
+import time
 import httpx
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import List, Dict, Any, Optional, Tuple
 
 from ..core.config import settings
@@ -89,11 +90,32 @@ class EmailService:
                 return [EmailRecipientRecord(**r) for r in existing]
             self._active_dispatches.add(circular_id)
 
+        started_at = datetime.now(timezone.utc).isoformat()
+        started_monotonic = time.perf_counter()
+        records: List[EmailRecipientRecord] = []
+        outcome = "ERROR"
         try:
-            return self._send_circular_emails_once(circular_id, subject, summary_override)
+            storage_service.start_email_routing_timing(circular_id, started_at)
+            records = self._send_circular_emails_once(circular_id, subject, summary_override)
+            outcome = "COMPLETED_WITH_FAILURES" if any(record.status == "FAILED" for record in records) else "COMPLETED"
+            return records
         finally:
-            with self._dispatch_guard:
-                self._active_dispatches.discard(circular_id)
+            sent_count = sum(1 for record in records if record.status in ("SENT", "DELIVERED"))
+            failed_count = sum(1 for record in records if record.status == "FAILED")
+            try:
+                storage_service.finish_email_routing_timing(
+                    circular_id=circular_id,
+                    started_at=started_at,
+                    completed_at=datetime.now(timezone.utc).isoformat(),
+                    dispatch_duration_seconds=time.perf_counter() - started_monotonic,
+                    outcome=outcome,
+                    recipient_count=len(records),
+                    sent_count=sent_count,
+                    failed_count=failed_count,
+                )
+            finally:
+                with self._dispatch_guard:
+                    self._active_dispatches.discard(circular_id)
 
     def _send_circular_emails_once(
         self,

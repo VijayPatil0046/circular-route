@@ -1,100 +1,474 @@
 {
   "faculties": [
     {
-      "id": "FAC001",
-      "standard_name": "Dr. Seema S.",
+      "id": "FAC101",
+      "standard_name": "Dr. Arjun Reddy",
+      "department": "Computer Science & Engineering",
+      "designation": "Professor",
+      "aliases": [
+        "Arjun",
+        "Dr Arjun",
+        "A. Reddy",
+        "Prof Arjun",
+        "Dr. A. Reddy"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC102",
+      "standard_name": "Prof. Priya Sharma",
+      "department": "Information Science & Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Priya",
+        "Prof Priya",
+        "P. Sharma",
+        "Dr Priya Sharma",
+        "P Sharma"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC103",
+      "standard_name": "Dr. Anil Kumar",
+      "department": "Electronics & Communication Engineering",
+      "designation": "Professor",
+      "aliases": [
+        "Anil",
+        "Dr Anil",
+        "A. Kumar",
+        "Prof Anil Kumar",
+        "Anil K"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC104",
+      "standard_name": "Prof. Sneha Rao",
+      "department": "Electrical & Electronics Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Sneha",
+        "S. Rao",
+        "Prof Sneha",
+        "Dr Sneha Rao",
+        "Sneha R"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC105",
+      "standard_name": "Dr. Karthik Nair",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Karthik",
+        "Dr Karthik",
+        "K. Nair",
+        "Prof Karthik",
+        "Karthik N"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC106",
+      "standard_name": "Prof. Divya Menon",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Divya",
+        "D. Menon",
+        "Prof Divya",
+        "Dr Divya Menon",
+        "Divya M"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC107",
+      "standard_name": "Dr. Rahul Verma",
+      "department": "Computer Science & Engineering",
+      "designation": "Professor",
+      "aliases": [
+        "Rahul",
+        "R. Verma",
+        "Dr Rahul",
+        "Prof Rahul Verma",
+        "Rahul V"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC108",
+      "standard_name": "Prof. Meera Iyer",
+      "department": "Information Science & Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Meera",
+        "M. Iyer",
+        "Prof Meera",
+        "Dr Meera Iyer",
+        "Meera I"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC109",
+      "standard_name": "Dr. Sandeep Kulkarni",
+      "department": "Electronics & Communication Engineering",
+      "designation": "Professor",
+      "aliases": [
+        "Sandeep",
+        "S. Kulkarni",
+        "Dr Sandeep",
+        "Prof Sandeep",
+        "S Kulkarni"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC110",
+      "standard_name": "Prof. Aishwarya Shetty",
+      "department": "Electrical & Electronics Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Aishwarya",
+        "A. Shetty",
+        "Prof Aishwarya",
+        "Dr Aishwarya",
+        "Aishwarya S"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC111",
+      "standard_name": "Dr. Naveen Gowda",
+      "department": "Mechanical Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Naveen",
+        "N. Gowda",
+        "Dr Naveen",
+        "Prof Naveen Gowda",
+        "Naveen G"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC112",
+      "standard_name": "Prof. Pooja Desai",
+      "department": "Civil Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Pooja",
+        "P. Desai",
+        "Prof Pooja",
+        "Dr Pooja Desai",
+        "Pooja D"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC113",
+      "standard_name": "Dr. Vikram Joshi",
       "department": "Computer Science & Engineering",
       "designation": "Professor & HOD",
       "aliases": [
-        "Seema",
-        "Dr Seema",
-        "Dr. Seema",
-        "S. Seema",
-        "Dr. S. Seema",
-        "Prof. Seema S.",
-        "Dr. Seema Sharma"
+        "Vikram",
+        "V. Joshi",
+        "Dr Vikram",
+        "Prof Vikram Joshi",
+        "V Joshi"
       ],
-      "email": "seema.cs@institution.edu"
+      "email": "vijaypatilcode@gmail.com"
     },
     {
-      "id": "FAC002",
-      "standard_name": "Prof. Rajesh Kumar",
+      "id": "FAC114",
+      "standard_name": "Prof. Kavya Ramesh",
+      "department": "Information Science & Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Kavya",
+        "K. Ramesh",
+        "Prof Kavya",
+        "Dr Kavya Ramesh",
+        "Kavya R"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC115",
+      "standard_name": "Dr. Harish Bhat",
+      "department": "Electronics & Communication Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Harish",
+        "H. Bhat",
+        "Dr Harish",
+        "Prof Harish Bhat",
+        "Harish B"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC116",
+      "standard_name": "Prof. Nisha Pillai",
+      "department": "Electrical & Electronics Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Nisha",
+        "N. Pillai",
+        "Prof Nisha",
+        "Dr Nisha Pillai",
+        "Nisha P"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC117",
+      "standard_name": "Dr. Prakash Hegde",
+      "department": "Mechanical Engineering",
+      "designation": "Professor",
+      "aliases": [
+        "Prakash",
+        "P. Hegde",
+        "Dr Prakash",
+        "Prof Prakash Hegde",
+        "Prakash H"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC118",
+      "standard_name": "Prof. Ananya Krishnan",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Ananya",
+        "A. Krishnan",
+        "Prof Ananya",
+        "Dr Ananya Krishnan",
+        "Ananya K"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC119",
+      "standard_name": "Dr. Mohan Raj",
       "department": "Computer Science & Engineering",
       "designation": "Associate Professor",
       "aliases": [
-        "Rajesh",
-        "Prof Rajesh",
-        "R. Kumar",
-        "Prof RK",
-        "Prof. Rajesh",
-        "Dr. Rajesh Kumar",
-        "R.K."
+        "Mohan",
+        "M. Raj",
+        "Dr Mohan",
+        "Prof Mohan Raj",
+        "Mohan R"
       ],
-      "email": "rajesh.kumar@institution.edu"
+      "email": "vijaypatilcode@gmail.com"
     },
     {
-      "id": "FAC021",
-      "standard_name": "Vijay Patil",
+      "id": "FAC120",
+      "standard_name": "Prof. Swathi Narayan",
+      "department": "Information Science & Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Swathi",
+        "S. Narayan",
+        "Prof Swathi",
+        "Dr Swathi Narayan",
+        "Swathi N"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC121",
+      "standard_name": "Dr. Abhishek Singh",
+      "department": "Electronics & Communication Engineering",
+      "designation": "Professor",
+      "aliases": [
+        "Abhishek",
+        "A. Singh",
+        "Dr Abhishek",
+        "Prof Abhishek Singh",
+        "Abhishek S"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC122",
+      "standard_name": "Prof. Lakshmi Narayan",
+      "department": "Electrical & Electronics Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Lakshmi",
+        "L. Narayan",
+        "Prof Lakshmi",
+        "Dr Lakshmi Narayan",
+        "Lakshmi N"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC123",
+      "standard_name": "Dr. Rohan Malhotra",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Rohan",
+        "R. Malhotra",
+        "Dr Rohan",
+        "Prof Rohan Malhotra",
+        "Rohan M"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC124",
+      "standard_name": "Prof. Deepa Srinivasan",
+      "department": "Civil Engineering",
+      "designation": "Professor",
+      "aliases": [
+        "Deepa",
+        "D. Srinivasan",
+        "Prof Deepa",
+        "Dr Deepa Srinivasan",
+        "Deepa S"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC125",
+      "standard_name": "Dr. Sanjay Patwardhan",
       "department": "Computer Science & Engineering",
-      "designation": "Student",
+      "designation": "Associate Professor",
       "aliases": [
-        "Vijay p"
+        "Sanjay",
+        "S. Patwardhan",
+        "Dr Sanjay",
+        "Prof Sanjay Patwardhan",
+        "Sanjay P"
       ],
-      "email": "vijaypatil00046@gmail.com"
+      "email": "vijaypatilcode@gmail.com"
     },
     {
-      "id": "FAC022",
+      "id": "FAC126",
+      "standard_name": "Prof. Ritu Chawla",
+      "department": "Information Science & Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Ritu",
+        "R. Chawla",
+        "Prof Ritu",
+        "Dr Ritu Chawla",
+        "Ritu C"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC127",
+      "standard_name": "Dr. Gopalakrishnan S",
+      "department": "Electronics & Communication Engineering",
+      "designation": "Professor",
+      "aliases": [
+        "Gopal",
+        "G. S.",
+        "Dr Gopalakrishnan",
+        "Prof Gopal",
+        "Gopalakrishnan S"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC128",
+      "standard_name": "Prof. Farah Khan",
+      "department": "Electrical & Electronics Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Farah",
+        "F. Khan",
+        "Prof Farah",
+        "Dr Farah Khan",
+        "Farah K"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC129",
+      "standard_name": "Dr. Manoj Chandra",
+      "department": "Mechanical Engineering",
+      "designation": "Assistant Professor",
+      "aliases": [
+        "Manoj",
+        "M. Chandra",
+        "Dr Manoj",
+        "Prof Manoj Chandra",
+        "Manoj C"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC130",
+      "standard_name": "Prof. Shalini Murthy",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Shalini",
+        "S. Murthy",
+        "Prof Shalini",
+        "Dr Shalini Murthy",
+        "Shalini M"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC131",
+      "standard_name": "Vijay Patil",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
+      "aliases": [
+        "Vijay"
+      ],
+      "email": "vijaypatilcode@gmail.com"
+    },
+    {
+      "id": "FAC132",
       "standard_name": "Venkatachala V",
-      "department": "Unknown",
-      "designation": "Unknown",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
       "aliases": [
-        "Venkatachala",
-        "V. Venkatachala"
+        "Venkatachala"
       ],
-      "email": "venkatachalavenku029@gmail.com"
+      "email": "vijaypatilcode@gmail.com"
     },
     {
-      "id": "FAC023",
+      "id": "FAC133",
       "standard_name": "Vijay V Patil",
-      "department": "Unknown",
-      "designation": "Unknown",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
       "aliases": [
-        "Vijay V",
-        "V. V. Patil"
+        "Vijay V Patil"
       ],
-      "email": "vijayvpatil13@gmail.com"
+      "email": "vijaypatilcode@gmail.com"
     },
     {
-      "id": "FAC024",
+      "id": "FAC134",
       "standard_name": "Suresh Kumar P",
-      "department": "Unknown",
-      "designation": "Unknown",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
       "aliases": [
-        "Suresh",
-        "S. Kumar"
+        "Suresh Kumar"
       ],
-      "email": "vijaykumarlkonapur@gmail.com"
+      "email": "vijaypatilcode@gmail.com"
     },
     {
-      "id": "FAC025",
+      "id": "FAC135",
       "standard_name": "Kiran S",
-      "department": "Unknown",
-      "designation": "Unknown",
+      "department": "Civil Engineering",
+      "designation": "Associate Professor",
       "aliases": [
-        "Kiran",
-        "K. S."
+        "Kiran"
       ],
-      "email": "vijayvpatil13@gmail.com"
-    },
-    {
-      "id": "FAC026",
-      "standard_name": "Zaid",
-      "department": "Unknown",
-      "designation": "Unknown",
-      "aliases": [
-        "Zaid"
-      ],
-      "email": "vijaypatil00046@gmail.com"
+      "email": "vijaypatilcode@gmail.com"
     }
   ]
 }

@@ -1,39 +1,73 @@
 --- PAGE 1 OF 1 ---
 RAMAIAH
-(Autonomous Institute, Affliated to VTU)
-(Approved by AICTE,NewDelhi&Govt.of Karnataka)
 Institute of Technology
-AccreditedbyNBA&NAACwithA+'Grade
-Ref.No.:1301/26-27
-06.10.2026
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1305/26–27
+22.10.2026
 CIRCULAR
-Subject: Department Technical Talk on "Generative AI in Industry"
-The Department of Computer Science and Engineering is organizing a
-technical talk on "Generative AI in Industry" for all CSE students.
-Date
-: 10.10.2026 (Saturday)
-Time
-: 11:00 AM - 12:30 PM
-Venue
-: CSE Seminar Hall (Room No. C-204)
-Speaker
-: Mr. Rahul Deshpande
-Senior AI Engineer, Microsoft
-All CSE students are required to attend the session and benefit from the
-discussion on real-world applications and career opportunities in Generative AI.
-G.S. Puasaol
-ControllerofExaminations
-Principal
-ControllerofExaminations
-PRINCIPAL
+Subject: Submission of Continuous Internal Evaluation (CIE) Marks – Odd Semester 2026–27
+All course coordinators and faculty members handling Odd Semester UG and PG courses are
+hereby informed that the finalization and freezing of Continuous Internal Evaluation (CIE) marks
+on the Academic ERP portal must be completed strictly as per the schedule below:
+Sl. No.
+Activity
+Deadline
+1
+Display of provisional CIE marks to stu-
+dents
+28.10.2026 (4:00 PM)
+2
+Resolution of student discrepancies by
+course faculty
+30.10.2026 (5:00 PM)
+3
+Locking of final CIE marks and HOD ap-
+proval on ERP
+02.11.2026 (2:00 PM)
+4
+Submission of signed hardcopy ledger to
+Exam Section
+03.11.2026 (1:00 PM)
+No requests for reopening the ERP portal will be entertained after the final locking deadline.
+Heads of Departments are requested to ensure 100% compliance so that eligibility lists for the
+upcoming Semester End Examinations can be published on time.
+G. S. Prasad
+Controller of Examinations
 M.S. Ramaiah Institute of Technology
-RAMAIAHINSTITUTEOFTECHNOLOGY
 (Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
 (Autonomous Institute Affiliated to VTU)
-Bengaluru - 54
+BENGALURU – 560 054
+Copy to:
+1. S. Rao, Electrical & Electronics Engineering
+2. Dr Karthik, Mechanical Engineering
+3. Prof. Divya Menon, Civil Engineering
+4. V. Joshi, Computer Science & Engineering
+5. All Departmental Exam Coordinators
+2
+
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTU)
+Accreditedby NBA&NAACwithA+'Grade
+Ref.No.:1305/26-27
+Subject:Submission ofContinuous Internal Evaluation(CIE) Marks-Odd Semester 2026-27
+hereby informed that the finalization and freezing of Continuous Internal Evaluation(CIE) marks
+on the Academic ERP portal mustbe completed strictly as per the schedulebelow:
+Sl. No. Activity
+Display of provisional CIE marks to stu-28.10.2026 (4:00 PM)
+/30.10.2026 (5:00PM)
+Locking of final CIE marks and HOD ap- 02.11.2026 (2:00 PM)
+Submission of signed hardcopy ledger to 03.11.2026 (1:00 PM)
+Heads of Departments are requested to ensure 1oo% compliance so that eligibility lists for the
+G.S.Prasad
+ControllerofExaminations
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstitute Affiliated toVTU)
+Bengaluru-560 054
 BENGALURU-560054
-Copy To:
-Vijay Patil
-Venkatachala V
-Susesh Kumax P, Kisan S
-Vijay V Patil

@@ -1,10 +1,128 @@
---- PAGE 1 OF 1 ---
-00PM
-heleby
-0py to [Handwritten]
-intormed
-Zaid,
-Vijcy Patil,
-meef
-WenkatachalaV
-HoD 00 18-11-2026
+--- PAGE 1 OF 2 ---
+RAMAIAH
+Institute of Technology
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1319/26–27
+07.11.2026
+CIRCULAR
+Subject: Call for Research Seed Grant Proposals and Publication Incentives (2026–27)
+To foster a vibrant research ecosystem and strengthen high-impact scholarly output, the Of-
+fice of Research and Innovation (ORI), Ramaiah Institute of Technology, invites applications
+from regular faculty members for the Institutional Research Seed Grant (IRSG) 2026–27 and
+announces revised guidelines for Research Publication Incentives.
+1. Institutional Research Seed Grant (IRSG) Objectives
+The IRSG scheme provides catalytic internal funding of up to Rs. 3,00,000 per project (dura-
+tion: 18 months) to assist early-career and mid-career faculty in developing proof-of-concept
+prototypes, acquiring preliminary experimental datasets, and preparing competitive propos-
+als for external funding agencies such as ANRF, DST, DBT, ISRO, DRDO, and AICTE. Interdis-
+ciplinary proposals involving two or more departments will receive priority weightage during
+peer evaluation.
+2. Revised Research Publication Incentive Structure
+Faculty members publishing original research articles with Ramaiah Institute of Technology, Ben-
+galuru as their primary institutional affiliation are eligible for financial incentives as detailed
+below:
+Publication / IPR Cate-
+gory
+Indexing / Tier Requirement
+Incentive Amount
+SCIE / SSCI Indexed Jour-
+nal Article
+Q1 Quartile (Clarivate JCR)
+Rs. 25,000 per paper
+SCIE / SSCI Indexed Jour-
+nal Article
+Q2 Quartile (Clarivate JCR)
+Rs. 15,000 per paper
+Scopus Indexed Journal
+Article
+Q1 / Q2 (SCImago SJR, non-predatory)
+Rs. 10,000 per paper
+IEEE / ACM / Springer
+Flagship Conference
+Core A / A* International Conference
+Rs. 10,000 + Reg. Support
+Indian
+Patent
+Granted
+(RIT as Applicant)
+Granted Patent Certificate
+Rs. 20,000 + Filing Fee
+Authored Technical Text-
+book
+International Publisher (ISBN)
+Rs. 15,000 per book
+3. Proposal Submission and Review Timeline
+Interested Principal Investigators (PIs) must submit their IRSG proposals in the standardized
+ORI template (maximum 8 pages including budget justification and Gantt chart) via the Re-
+search Portal on or before 30.11.2026. Proposals will undergo blind peer review by the Re-
+search Advisory Committee (RAC), followed by an oral defense in the second week of December
+2026. Sanction letters and first-tranche disbursements will be issued by 05.01.2027.
+4. Ethics, Plagiarism, and Open-Access Compliance
+21
+
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTU)
+(Approved byAICTE,NewDelhi&Govt.of
+Accreditedby NBA&NAACwith'A+'Grade
+Ref.No.:1319/26-27
+fromregularfaculty membersfortheInstitutional ResearchSeed Grant(IRsG)2026-27and
+The IRSG scheme provides catalytic internal funding of up to Rs. 3,oo,oo0 per project (dura-
+2.Revised ResearchPublicationIncentiveStructure
+Publication / IPR Cate-Indexing / Tier Requirement
+SCIE / SSCI Indexed Jour- Q1 Quartile (Clarivate JCR)
+SCIE / SSCI Indexed Jour- Q2 Quartile (Clarivate JCR)
+IEEE / ACM / Springer Core A/ A* International Conference
+Rs.10,000 + Reg. Support
+FlagshipConference
+IndianPatent GrantedGranted Patent Certificate
+Authored Technical Text- International Publisher (ISBN)
+3. Proposal Submission and ReviewTimeline
+search Portal on or before 30.11.2026.Proposals will undergo blind peer review by the Re-
+2026.Sanctionlettersandfirst-tranchedisbursementswillbeissuedby05.01.2027.
+
+--- PAGE 2 OF 2 ---
+All manuscripts submitted for incentive claims must be free from predatory journals (verified
+against UGC-CARE and Scopus active lists) and must strictly adhere to COPE publication ethics.
+Any paper involving human subjects or sensitive personal datasets requires prior approval
+from the Institutional Ethics Committee (IEC). Incentive amounts for multi-author papers from
+RIT will be apportioned equally among internal authors, with a 60% share reserved for the
+First/Corresponding Author where applicable.
+5. Utilization and Deliverables for Seed Grants
+Recipients of IRSG funding are expected to publish at least one Q1/Q2 SCIE journal paper or file
+one Indian Patent within 24 months of grant commencement, and submit at least one external
+grant proposal to a national funding agency utilizing the preliminary results generated.
+Dean (Research & Innovation)
+Dean – Research & Innovation
+M.S. Ramaiah Institute of Technology
+(Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
+(Autonomous Institute Affiliated to VTU)
+BENGALURU – 560 054
+Copy to:
+1. Prof Ritu, Information Science & Engineering
+2. G. S., Electronics & Communication Engineering
+3. Dr Farah Khan, Electrical & Electronics Engineering
+4. Dr Manoj, Mechanical Engineering
+5. Shalini M, Civil Engineering
+6. All Department Research Coordinators
+22
+
+[Extracted Annotations / Remarks]
+against UGC-CARE and Scopus active lists) and must strictly adhere to COPEpublication ethics.
+fromtheInstitutional Ethics Committee(IEC).Incentive amountsfor multi-authorpapersfrom
+5.UtilizationandDeliverablesforSeedGrants
+oneIndianPatentwithin24monthsofgrantcommencement,andsubmitatleastoneexternal
+Dean(Research&Innovation)
+Dean-Research&Innovation
+RAMAIAHINSTITUTEOFTECHNOLOGY
+(AutonomousInstituteAffiliatedtoVTU)
+Bengaluru - 560 054
+BENGALURU-560054
+3.Dr Farah Khan, Electrical & Electronics Engineering
+6.AllDepartmentResearch Coordinators

@@ -1,161 +1,123 @@
---- PAGE 1 OF 3 ---
-Visvesvaraya Technological University
-(State University of Govermment of Karnataka Established as per the VTU Act, 1994)
-"Jnana Sangama"Belagavi-590018,Karnataka,India
-Phone:(0831）2498100
-Dr.Prasad B.Rampure M.E.P.hd
-：（0831）2405467
-Fax
-Registrar
-Date:
-14JUL2026
-Ref:VTU/BGM/ACA/A4/2026-27/1731
-NOTIFICATION
-Sub.: Academic Equivalences of VTU B.E Courses reg
-Ref.:1VTU/Aca/A6/2014-15/2249 dated 17-6-2014
-2.VTU/BGM/Aca-OS/Equln/2017-18/353,dated13-4-2017
-3.VTU/Aca/A-9/2019-20/1870.dated25-8-2020
-4.VTU's Executive Council Resolution No.22.2.dated 7-10-2023（174Meeting)
-5.VTU/Aca/A9/2023-24/3813,dated 03-11-2023
-6.VTU's Executive Council Resolution No.2 2.1 dated 02-06-2026（189 Meeting)
-Considering the requests of the students the Exocutive Council resolved to approve the academic
-equivalence of VTu B.E courses whose details are mentioned in the following table
-Considered to be
-Remark
-SL,
-EC Resolution
-Equivalence to
-B.E.Course
-No
-B.E.In
-Electronics&
-Instru nentation Technology
-Instrumentation
-Engineering
-Transportation Engineering/
-Construction Technology &
-Civil Engineering
-Management Environmental
-Engineering
-Aerospace
-For Acadernic
-3
-Aeronautical Engineering
-Engineering
-Equivalence
-Computer Sclence
-2.22dated23-3-2017
-and
-&Engineering/
-Information Science &
-2.2.4dated 10 1-2020
-Employability
-Information
-Engineering
-2.2.2 dated30-7-2020
-purpose
-Technology
-Electronics&
-Electronics & Instrumentation
-Communication
-5
-Engineering
-Engineering
-Industrial Production&
-Mechanical
-Engineeringi Automobile
-6
-Engineering
-Engineering/ Tool Engineering
-22.2.dated7-10-2023
-Automation & Robotics
-7
-A
-Studs
-Page 1/2
-jacourant [Handwritten]
-1617
+--- PAGE 1 OF 2 ---
+RAMAIAH
+Institute of Technology
+(Autonomous Institute, Affiliated to VTU)
+(Approved by AICTE, New Delhi & Govt. of
+Karnataka)
+Accredited by NBA & NAAC with ‘A+’ Grade
+Ref. No.: 1315/26–27
+03.11.2026
+CIRCULAR
+Subject: Instructions for Final Year Capstone Project Phase-I Evaluation (2026–27)
+All Heads of Departments, Project Coordinators, and Final Year (VII Semester) B.E. students
+are hereby informed that the Capstone Project Phase-I Evaluation will be conducted across all
+engineering departments between 16.11.2026 and 21.11.2026. The evaluation aims to vali-
+date problem formulation, literature survey depth, system architecture design, and feasibility
+of implementation before students progress to Phase-II in the VIII Semester.
+1. Constitution of Project Evaluation Committees (PEC)
+Each department shall constitute one or more Project Evaluation Committees comprising a se-
+nior faculty member (Professor or Associate Professor) as Chairperson, the respective Project
+Guide, and two domain-expert faculty members. Where interdisciplinary projects involve mul-
+tiple departments, at least one external-department faculty member from the collaborating
+discipline shall be invited to the panel.
+Evaluation Criterion
+Expected Deliverables and Assessment Focus
+Max Marks
+Problem Identification
+Clarity of problem statement, societal/industrial rele-
+vance, alignment with SDGs
+10
+Literature Review
+Minimum 15 peer-reviewed IEEE/Springer/Elsevier pa-
+pers; gap analysis matrix
+10
+Methodology & Design
+Block diagrams,
+mathematical modeling,
+compo-
+nent/tool selection, constraints
+15
+Preliminary Results
+Simulation prototype, dataset validation, or proof-of-
+concept demonstration
+10
+Documentation & Viva
+LaTeX/Word formatted synopsis, plagiarism report
+(<15%), Q&A defense
+05
+Total Phase-I Marks
+Minimum passing threshold: 25 Marks (50%)
+50
+2. Mandatory Pre-Submission Documentation
+Every project batch (maximum 4 students per team) must submit a spiral-bound Phase-I report
+along with a digital PDF upload on the departmental LMS at least 48 hours prior to their sched-
+uled presentation slot. The report must include an official Turnitin/DrillBit similarity report duly
+attested by the Project Guide confirming a similarity index below 15% (excluding bibliography
+and standard equations). Teams failing to meet the plagiarism threshold will be deferred for
+resubmission with a 10% grade penalty.
+3. Alignment with Program Outcomes (POs) and Rubrics
+Project Coordinators must ensure that individual student contributions are assessed sepa-
+rately using the standardized OBE Project Rubric. Even within a collaborative team, marks must
+reflect each student’s specific technical contribution, defense articulation, and understanding
+of ethical, environmental, and economic impacts (PO6, PO7, PO8, and PO11). Copy-paste code
+13
 
---- PAGE 2 OF 3 ---
-Computer Sclence&
-Engineering
-Computer Engineering
-Artificial Intelligence & Data
-Science
-Artificial Intelligence and
-Machine Learning
-Computer & Communication
-Engineering
-Computer Science & Business
-System
-For Academic
-Computer Science & Design
-Equivalence
-Computer Science &
-Computer
-and`
-Engineering (loT)
-2.2,1dated2-6-2026
-Science&
-Employabilty
-8
-CSE (Artificial Intelligence &
-Engineering
-Machine Learning)
-CSE(Artificial Intelligence)
-CSE (Cyber Security)
-CSE(Data Science)
-CSE(loT & Cyber Security
-including Block Chain
-Technulogy)
-Data Science
-Information Science &
-Engineering
-Computer Science
-Computer Science and
-Technology
-This applies only to the studentsof VTu
-VTU willissue an equivalence certificate in this regard on the individual request The interested student may
-apply toVTU asdetaileu below
-1.Documents to be enclosed
-a)Application addressing to the Registrar VTU,Belagavi with the complete address for
-correspondence e-Mail and Contact Mobile number.
-b)Attested copy of 1 to 8th semester marks cards/PDC/Degree certificate
-2Student fee for equivalence of UG Program Rs.25oo/-to be paid online （receipt need to
-enclose with the Application)
-1407126
-m
-REGISTRAR
-To,
-The principals of affliated (Constituent Non-autonomous and autonomous) engineering colleges under the
-ambit of the university
-The Chairpersons/Programme coordinator of university departments at Bengaluru Belagavi,Kalaburgi
-Mysuru and Talkal
-Copy to
-To the Hon'ble Vice-Chancellor through the Secretary to the VC VTU Belagavi, for information.
-1
-2.
-The Registrar (Evaluation),VTU Belagavi,for information and the needful
-3
-The Director ITi SMu.VTu Belagavi for information and to make arrangements to upload on the VTU web portal
-4
-The Special Officer QPDS section VTu,Belagavi,for the information and needful.
-5
-All the concerned Special Oficer/s and Caseworker/s of the academic section, VTU. Belagavi
-Ofice copy
-6
-Page 2/2
+[Extracted Annotations / Remarks]
+(AutonomousInstitute,AffiliatedtoVTu)
+(Approved byAICTE,NewDelhi&Govt.of
+Accreditedby NBA&NAACwith'A+'Grade
+Ref.No.:1315/26-27
+Subject:Instructions for Final Year Capstone Project Phase-I Evaluation (2026-27)
+of implementation before students progress to Phase-II in the VIlI Semester.
+niorfacultymember(ProfessororAssociateProfessor)asChairperson,therespectiveProject
+ExpectedDeliverablesandAssessmentFocus
+Clarityofproblemstatement,societal/industrialrele-
+vance,alignmentwithSDGs
+Block diagrams, mathematical modeling, compo-
+Documentation&Viva
+TotalPhase-IMarks
+3.AlignmentwithProgram Outcomes(Pos)and Rubrics
+reflect each student's specific technical contribution, defense articulation, and understanding
 
---- PAGE 3 OF 3 ---
-Please Note:
-1.The academic sessions for the above-mentioned Semester shall commence on the date
-specified in the Academic Calendar.
-2.As per the 2022 Scheme, Semesters Vll and VIll are swappable. Students may opt to
-undertake the Vlll Semester components (Internship,Professional Elective Course (PEC),
-and Open Elective Course (OEC)) during the ODD semester and complete the VII Semester
-components (Project Work,Integrated Professional Core Course (IPcC), Professional
-Core Course (PCC), Professional Elective Course (PEC),and Open Elective Course (OEc))
-during the subsequent EVEN semester. Alternatively, students may pursue the Vll and
-Examination.
-# signed with a 550,000 degree [Handwritten]
-Jnana Sangama BelagaV 590018 Kamataka INDlA
+--- PAGE 2 OF 2 ---
+repositories without demonstrable comprehension will result in an immediate zero for the im-
+plementation component.
+4. Industry-Sponsored and Patentable Projects
+Teams executing industry-sponsored projects must attach a formal authorization letter from
+the industry mentor detailing the non-confidential scope of work. Projects demonstrating
+novel hardware architectures, algorithms, or sustainable civil/mechanical processes should
+be flagged by the PEC Chairperson for preliminary screening by the RIT Intellectual Property
+Rights (IPR) Cell for potential patent filing support during Phase-II.
+5. Marks Consolidation and Submission
+Department Project Coordinators shall compile the rubric sheets, attendance records, and final
+consolidated marks in the prescribed ERP format and submit the signed summary to the Dean
+(Academics) office by 25.11.2026.
+Dean (Academics)
+Dean – Academic Affairs
+M.S. Ramaiah Institute of Technology
+(Autonomous)
+Bengaluru – 560 054
+Principal
+PRINCIPAL
+RAMAIAH INSTITUTE OF TECHNOLOGY
+(Autonomous Institute Affiliated to VTU)
+BENGALURU – 560 054
+Copy to:
+1. Prof Divya, Civil Engineering
+2. Rahul V, Computer Science & Engineering
+3. Dr. Meera Iyer, Information Science & Engineering
+4. Dr Sandeep, Electronics & Communication Engineering
+5. Aishwarya S, Electrical & Electronics Engineering
+6. All Departmental Project Coordinators
+14
+
+[Extracted Annotations / Remarks]
+plementationcomponent.
+4.Industry-Sponsored and PatentableProjects
+5.MarksConsolidationandSubmission
+Dean-AcademicAffairs
+RAMAIAHINSTITUTEOFTECHNOLOGY
+Bengaluru-560054
+BENGALURU-560054
+4.Dr Sandeep, Electronics& Communication Engineering
+5.Aishwarya S,Electrical &Electronics Engineering
