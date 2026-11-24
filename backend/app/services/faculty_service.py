@@ -3,15 +3,14 @@ import logging
 import re
 from pathlib import Path
 from typing import List, Dict, Any, Optional, Tuple
-import numpy as np
 
 from ..core.config import settings
 from ..models.schemas import FacultyMember, FacultyMatch
 from ..utils.text_normalizer import (
     normalize_name,
-    compute_name_token_similarity,
     extract_recipient_sections,
 )
+from .vector_store import vector_store
 
 logger = logging.getLogger(__name__)
 
@@ -30,9 +29,6 @@ class FacultyService:
         self.faculty_file = faculty_file
         self.faculties: List[FacultyMember] = []
         self.faculty_by_id: Dict[str, FacultyMember] = {}
-        self.embedding_model = None
-        self.faculty_embeddings: Dict[str, np.ndarray] = {}
-        self._embeddings_initialized = False
         self._load_faculty_directory()
 
     def _load_faculty_directory(self) -> None:
@@ -59,79 +55,6 @@ class FacultyService:
         if not self.faculty_by_id:
             self._load_faculty_directory()
         return self.faculty_by_id.get(faculty_id)
-
-    def _ensure_embeddings(self) -> None:
-        """Lazy load sentence-transformers on demand with instant fallback."""
-        if self._embeddings_initialized:
-            return
-        self._embeddings_initialized = True
-
-        try:
-            import os
-            from sentence_transformers import SentenceTransformer
-            # Always attempt local files only first to avoid hanging on network
-            self.embedding_model = SentenceTransformer(settings.NAME_EMBEDDING_MODEL, local_files_only=True)
-            self._compute_directory_embeddings()
-            logger.info("Successfully precomputed faculty directory embeddings from local cache.")
-        except Exception as e:
-            logger.info(f"SentenceTransformers local weights not present ({e}). Using ultra-fast token & alias similarity.")
-            self.embedding_model = None
-
-    def _compute_directory_embeddings(self) -> None:
-        if not self.embedding_model:
-            return
-            
-        for faculty in self.faculties:
-            texts = [faculty.standard_name] + faculty.aliases
-            embeddings = self.embedding_model.encode(texts, convert_to_numpy=True)
-            avg_emb = np.mean(embeddings, axis=0)
-            norm = np.linalg.norm(avg_emb)
-            if norm > 0:
-                avg_emb = avg_emb / norm
-            self.faculty_embeddings[faculty.id] = avg_emb
-
-    def compute_similarity(self, query: str, faculty: FacultyMember) -> float:
-        """
-        Calculates cosine similarity using sentence-transformers if available,
-        combined with token / alias similarity.
-        """
-        query_norm = normalize_name(query)
-        if not query_norm:
-            return 0.0
-
-        # 1. Exact match against standard name
-        if query_norm == normalize_name(faculty.standard_name):
-            return 1.0
-
-        # 2. Exact match against any alias
-        for alias in faculty.aliases:
-            if query_norm == normalize_name(alias):
-                return 0.99
-
-        # 3. Token & Initial overlap similarity
-        token_sim = compute_name_token_similarity(query, faculty.standard_name)
-        for alias in faculty.aliases:
-            token_sim = max(token_sim, compute_name_token_similarity(query, alias))
-
-        # 4. Embedding cosine similarity if available
-        self._ensure_embeddings()
-        emb_sim = 0.0
-        if self.embedding_model and faculty.id in self.faculty_embeddings:
-            try:
-                q_emb = self.embedding_model.encode([query], convert_to_numpy=True)[0]
-                norm = np.linalg.norm(q_emb)
-                if norm > 0:
-                    q_emb = q_emb / norm
-                f_emb = self.faculty_embeddings[faculty.id]
-                emb_sim = float(np.dot(q_emb, f_emb))
-                emb_sim = max(0.0, min(1.0, emb_sim))
-            except Exception:
-                emb_sim = 0.0
-
-        if emb_sim > 0:
-            return max(emb_sim, token_sim, (0.6 * emb_sim + 0.4 * token_sim))
-        else:
-            return token_sim
 
     def is_institutional_role_only(self, text: str) -> bool:
         cleaned = normalize_name(text)
@@ -218,7 +141,7 @@ class FacultyService:
             Output: Extracted 'To' and 'Copy To' sections and raw candidate names.
         Embedding Retrieval:
             Input: Extracted recipient names from Stage 1.
-            Retrieval: In-memory sentence-transformers (all-MiniLM-L6-v2) embedding & similarity search.
+            Retrieval: Qdrant vector search using all-MiniLM-L6-v2.
             Output: Focused faculty context (top directory matches with IDs, emails, departments, aliases).
         Stage 2 (LLM Call 2):
             Input: Extracted recipient names + retrieved embedding context.
@@ -259,7 +182,7 @@ class FacultyService:
             return [], True, llm_summary
 
         # ---------------------------------------------------------
-        # INTERMEDIATE STAGE: Retrieve Context from Local Embeddings
+        # INTERMEDIATE STAGE: Retrieve Context from Qdrant
         # ---------------------------------------------------------
         logger.info(f"Retrieving embedding context for {len(extracted_candidates)} recipient candidates...")
         candidates_with_embedding_context = []
@@ -267,16 +190,23 @@ class FacultyService:
             raw_ref = cand.get("raw_reference") or cand.get("extracted_name", "")
             section = cand.get("section", "To")
             
-            # Query faculty directory using sentence-transformers embeddings + similarity
-            scores = []
-            for faculty in self.faculties:
-                score = self.compute_similarity(raw_ref, faculty)
-                if score > 0.30:
-                    scores.append((faculty, score))
-            scores.sort(key=lambda x: x[1], reverse=True)
-            
-            # Select top 3-4 matches as embedding context
-            top_candidates = scores[:4]
+            hits = vector_store.search(raw_ref)
+            top_candidates = []
+            for hit in hits:
+                payload = hit["payload"]
+                try:
+                    faculty = FacultyMember(
+                        id=str(payload.get("id", hit["id"])),
+                        standard_name=payload.get("standard_name") or payload.get("name") or "",
+                        department=payload.get("department") or "",
+                        designation=payload.get("designation") or "",
+                        aliases=payload.get("aliases") or [],
+                        email=payload.get("email") or "",
+                    )
+                except Exception:
+                    logger.warning("Skipping invalid faculty payload from Qdrant point %s", hit["id"])
+                    continue
+                top_candidates.append((faculty, float(hit["score"])))
             context_entries = [
                 {
                     "faculty_id": f.id,
@@ -293,7 +223,8 @@ class FacultyService:
                 "extracted_name": raw_ref,
                 "section": section,
                 "retrieved_faculty_context": context_entries,
-                "top_local_candidates": top_candidates
+                "top_candidates": top_candidates,
+                "retrieved_faculty_by_id": {faculty.id: faculty for faculty, _ in top_candidates},
             })
 
         # ---------------------------------------------------------
@@ -318,7 +249,7 @@ class FacultyService:
                 {
                     "raw_reference": item["extracted_name"],
                     "section": item["section"],
-                    "top_candidates": item["top_local_candidates"],
+                    "top_candidates": item["top_candidates"],
                     "context": f"Section: {item['section']}"
                 }
                 for item in candidates_with_embedding_context
@@ -360,7 +291,7 @@ class FacultyService:
             if current_match and current_match.faculty_id != "UNKNOWN":
                 continue
 
-            top_candidates = item.get("top_local_candidates", [])
+            top_candidates = item.get("top_candidates", [])
             if not top_candidates:
                 continue
 
@@ -577,7 +508,9 @@ Respond ONLY in valid JSON matching this schema:
             is_ambiguous = rf.get("is_ambiguous", False)
             conf = float(rf.get("confidence", 0.0))
 
-            faculty = self.get_faculty_by_id(f_id)
+            faculty = next((item.get("retrieved_faculty_by_id", {}).get(f_id)
+                            for item in candidates_with_context
+                            if f_id in item.get("retrieved_faculty_by_id", {})), None)
             if not faculty or f_id == "UNKNOWN":
                 matches.append(FacultyMatch(
                     original_reference=raw_ref,
@@ -586,7 +519,7 @@ Respond ONLY in valid JSON matching this schema:
                     department="",
                     email="",
                     similarity_score=conf,
-                    matching_explanation=rf.get("matching_explanation", "Could not verify identity in local directory."),
+                    matching_explanation=rf.get("matching_explanation", "Could not verify identity in retrieved Qdrant results."),
                     supporting_evidence=f"Extracted from {section} section.",
                     relevance_explanation="Requires manual confirmation or is an external recipient.",
                     section_found=section,
@@ -594,8 +527,10 @@ Respond ONLY in valid JSON matching this schema:
                     is_verified=False
                 ))
             else:
-                backend_score = self.compute_similarity(raw_ref, faculty)
-                final_score = backend_score
+                retrieved = next((entry for item in candidates_with_context
+                                  if normalize_name(item["extracted_name"]) == normalize_name(raw_ref)
+                                  for entry in item.get("top_candidates", []) if entry[0].id == f_id), None)
+                final_score = retrieved[1] if retrieved else conf
                 is_ambiguous = final_score < 0.50
 
                 status = "AMBIGUOUS" if is_ambiguous else "AUTO_VERIFIED"

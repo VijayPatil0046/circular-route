@@ -5,6 +5,7 @@ from dotenv import load_dotenv
 # Base backend directory
 BACKEND_DIR = Path(__file__).resolve().parent.parent.parent
 load_dotenv(BACKEND_DIR / ".env")
+load_dotenv(BACKEND_DIR.parent / ".env")
 
 class Settings:
     PROJECT_NAME: str = "CircularRoute"
@@ -16,6 +17,10 @@ class Settings:
     
     # Embedding Settings
     NAME_EMBEDDING_MODEL: str = os.getenv("NAME_EMBEDDING_MODEL", "all-MiniLM-L6-v2")
+    QDRANT_URL: str = os.getenv("QDRANT_URL") or os.getenv("qdrant_endpoint", "")
+    QDRANT_API_KEY: str = os.getenv("QDRANT_API_KEY") or os.getenv("qdrant_api_key", "")
+    QDRANT_COLLECTION: str = os.getenv("QDRANT_COLLECTION", "faculty")
+    FACULTY_SEARCH_TOP_K: int = int(os.getenv("FACULTY_SEARCH_TOP_K", "5"))
     
     # Resend Settings
     RESEND_API_KEY: str = os.getenv("RESEND_API_KEY", "")
@@ -38,6 +43,10 @@ class Settings:
         self.RESEND_API_KEY = os.getenv("RESEND_API_KEY", "")
         self.RESEND_FROM_EMAIL = os.getenv("RESEND_FROM_EMAIL", "notifications@circularroute.aclclouds.online")
         self.RESEND_FROM_NAME = os.getenv("RESEND_FROM_NAME", "CircularRoute")
+        self.QDRANT_URL = os.getenv("QDRANT_URL") or os.getenv("qdrant_endpoint", "")
+        self.QDRANT_API_KEY = os.getenv("QDRANT_API_KEY") or os.getenv("qdrant_api_key", "")
+        self.QDRANT_COLLECTION = os.getenv("QDRANT_COLLECTION", "faculty")
+        self.FACULTY_SEARCH_TOP_K = int(os.getenv("FACULTY_SEARCH_TOP_K", "5"))
 
 settings = Settings()
 

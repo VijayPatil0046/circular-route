@@ -10,9 +10,9 @@
     "supporting_evidence": "Found in Copy To section.",
     "relevance_explanation": "Designated recipient in Copy To section.",
     "section_found": "Copy To",
-    "verification_status": "AUTO_VERIFIED",
+    "verification_status": "MANUALLY_CONFIRMED",
     "is_verified": true,
-    "manual_override": false
+    "manual_override": true
   },
   {
     "original_reference": "L. Narayan",
@@ -25,9 +25,9 @@
     "supporting_evidence": "Found in Copy To section.",
     "relevance_explanation": "Designated recipient in Copy To section.",
     "section_found": "Copy To",
-    "verification_status": "AUTO_VERIFIED",
+    "verification_status": "MANUALLY_CONFIRMED",
     "is_verified": true,
-    "manual_override": false
+    "manual_override": true
   },
   {
     "original_reference": "Dr. Rohan Malhotra",
@@ -40,9 +40,9 @@
     "supporting_evidence": "Found in Copy To section.",
     "relevance_explanation": "Designated recipient in Copy To section.",
     "section_found": "Copy To",
-    "verification_status": "AUTO_VERIFIED",
+    "verification_status": "MANUALLY_CONFIRMED",
     "is_verified": true,
-    "manual_override": false
+    "manual_override": true
   },
   {
     "original_reference": "Prof Deepa",
@@ -55,9 +55,9 @@
     "supporting_evidence": "Found in Copy To section.",
     "relevance_explanation": "Designated recipient in Copy To section.",
     "section_found": "Copy To",
-    "verification_status": "AUTO_VERIFIED",
+    "verification_status": "MANUALLY_CONFIRMED",
     "is_verified": true,
-    "manual_override": false
+    "manual_override": true
   },
   {
     "original_reference": "Sanjay P",
@@ -70,9 +70,9 @@
     "supporting_evidence": "Found in Copy To section.",
     "relevance_explanation": "Designated recipient in Copy To section.",
     "section_found": "Copy To",
-    "verification_status": "AUTO_VERIFIED",
+    "verification_status": "MANUALLY_CONFIRMED",
     "is_verified": true,
-    "manual_override": false
+    "manual_override": true
   },
   {
     "original_reference": "Central Purchase Officer",

@@ -1,0 +1,9 @@
+
+> frontend@0.0.0 dev C:\Users\Venkatachala V\genai\circular-route\frontend
+> vite "--" "--host" "127.0.0.1"
+
+
+  VITE v8.3.8  ready in 1987 ms
+
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: use --host to expose

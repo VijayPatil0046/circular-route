@@ -1,0 +1,72 @@
+2026-11-24T16:16:54,847 Using pip 25.0.1 from C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip (python 3.12)
+2026-11-24T16:16:54,848 Non-user install because user site-packages disabled
+2026-11-24T16:16:55,298 Created temporary directory: C:\Users\Venkatachala V\AppData\Local\Temp\pip-build-tracker-t0sg653d
+2026-11-24T16:16:55,298 Initialized build tracking at C:\Users\Venkatachala V\AppData\Local\Temp\pip-build-tracker-t0sg653d
+2026-11-24T16:16:55,298 Created build tracker: C:\Users\Venkatachala V\AppData\Local\Temp\pip-build-tracker-t0sg653d
+2026-11-24T16:16:55,298 Entered build tracker: C:\Users\Venkatachala V\AppData\Local\Temp\pip-build-tracker-t0sg653d
+2026-11-24T16:16:55,300 Created temporary directory: C:\Users\Venkatachala V\AppData\Local\Temp\pip-install-2khyjubw
+2026-11-24T16:16:55,306 Created temporary directory: C:\Users\Venkatachala V\AppData\Local\Temp\pip-ephem-wheel-cache-lizol3rm
+2026-11-24T16:16:55,326 1 location(s) to search for versions of fastapi:
+2026-11-24T16:16:55,326 * https://pypi.org/simple/fastapi/
+2026-11-24T16:16:55,327 Fetching project page and analyzing links: https://pypi.org/simple/fastapi/
+2026-11-24T16:16:55,327 Getting page https://pypi.org/simple/fastapi/
+2026-11-24T16:16:55,327 Found index url https://pypi.org/simple/
+2026-11-24T16:16:55,407 WARNING: Retrying (Retry(total=4, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x000002227E54B980>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /simple/fastapi/
+2026-11-24T16:16:55,984 WARNING: Retrying (Retry(total=3, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x00000222014F6AE0>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /simple/fastapi/
+2026-11-24T16:16:57,044 WARNING: Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x00000222014F6D20>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /simple/fastapi/
+2026-11-24T16:16:59,117 WARNING: Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x00000222014F6E40>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /simple/fastapi/
+2026-11-24T16:17:03,178 WARNING: Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x00000222014F7140>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')': /simple/fastapi/
+2026-11-24T16:17:03,249 Could not fetch URL https://pypi.org/simple/fastapi/: connection error: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/fastapi/ (Caused by NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x00000222014F73E0>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')) - skipping
+2026-11-24T16:17:03,250 Skipping link: not a file: https://pypi.org/simple/fastapi/
+2026-11-24T16:17:03,251 Given no hashes to check 0 links for project 'fastapi': discarding no candidates
+2026-11-24T16:17:03,251 ERROR: Could not find a version that satisfies the requirement fastapi>=0.110.0 (from versions: none)
+2026-11-24T16:17:03,608 1 location(s) to search for versions of pip:
+2026-11-24T16:17:03,608 * https://pypi.org/simple/pip/
+2026-11-24T16:17:03,608 Fetching project page and analyzing links: https://pypi.org/simple/pip/
+2026-11-24T16:17:03,608 Getting page https://pypi.org/simple/pip/
+2026-11-24T16:17:03,608 Found index url https://pypi.org/simple/
+2026-11-24T16:17:03,699 Could not fetch URL https://pypi.org/simple/pip/: connection error: HTTPSConnectionPool(host='pypi.org', port=443): Max retries exceeded with url: /simple/pip/ (Caused by NewConnectionError('<pip._vendor.urllib3.connection.HTTPSConnection object at 0x00000222014F6A50>: Failed to establish a new connection: [WinError 10013] An attempt was made to access a socket in a way forbidden by its access permissions')) - skipping
+2026-11-24T16:17:03,700 Skipping link: not a file: https://pypi.org/simple/pip/
+2026-11-24T16:17:03,700 Given no hashes to check 0 links for project 'pip': discarding no candidates
+2026-11-24T16:17:03,700 No remote pip version found
+2026-11-24T16:17:03,700 ERROR: No matching distribution found for fastapi>=0.110.0
+2026-11-24T16:17:03,703 Exception information:
+2026-11-24T16:17:03,703 Traceback (most recent call last):
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 397, in resolve
+2026-11-24T16:17:03,703     self._add_to_criteria(self.state.criteria, r, parent=None)
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 174, in _add_to_criteria
+2026-11-24T16:17:03,703     raise RequirementsConflicted(criterion)
+2026-11-24T16:17:03,703 pip._vendor.resolvelib.resolvers.RequirementsConflicted: Requirements conflict: SpecifierRequirement('fastapi>=0.110.0')
+2026-11-24T16:17:03,703 
+2026-11-24T16:17:03,703 During handling of the above exception, another exception occurred:
+2026-11-24T16:17:03,703 
+2026-11-24T16:17:03,703 Traceback (most recent call last):
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\resolver.py", line 95, in resolve
+2026-11-24T16:17:03,703     result = self._result = resolver.resolve(
+2026-11-24T16:17:03,703                             ^^^^^^^^^^^^^^^^^
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 546, in resolve
+2026-11-24T16:17:03,703     state = resolution.resolve(requirements, max_rounds=max_rounds)
+2026-11-24T16:17:03,703             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_vendor\resolvelib\resolvers.py", line 399, in resolve
+2026-11-24T16:17:03,703     raise ResolutionImpossible(e.criterion.information)
+2026-11-24T16:17:03,703 pip._vendor.resolvelib.resolvers.ResolutionImpossible: [RequirementInformation(requirement=SpecifierRequirement('fastapi>=0.110.0'), parent=None)]
+2026-11-24T16:17:03,703 
+2026-11-24T16:17:03,703 The above exception was the direct cause of the following exception:
+2026-11-24T16:17:03,703 
+2026-11-24T16:17:03,703 Traceback (most recent call last):
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_internal\cli\base_command.py", line 106, in _run_wrapper
+2026-11-24T16:17:03,703     status = _inner_run()
+2026-11-24T16:17:03,703              ^^^^^^^^^^^^
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_internal\cli\base_command.py", line 97, in _inner_run
+2026-11-24T16:17:03,703     return self.run(options, args)
+2026-11-24T16:17:03,703            ^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_internal\cli\req_command.py", line 67, in wrapper
+2026-11-24T16:17:03,703     return func(self, options, args)
+2026-11-24T16:17:03,703            ^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_internal\commands\install.py", line 386, in run
+2026-11-24T16:17:03,703     requirement_set = resolver.resolve(
+2026-11-24T16:17:03,703                       ^^^^^^^^^^^^^^^^^
+2026-11-24T16:17:03,703   File "C:\Users\Venkatachala V\genai\circular-route\backend\venv\Lib\site-packages\pip\_internal\resolution\resolvelib\resolver.py", line 104, in resolve
+2026-11-24T16:17:03,703     raise error from e
+2026-11-24T16:17:03,703 pip._internal.exceptions.DistributionNotFound: No matching distribution found for fastapi>=0.110.0
+2026-11-24T16:17:03,708 Removed build tracker: 'C:\\Users\\Venkatachala V\\AppData\\Local\\Temp\\pip-build-tracker-t0sg653d'

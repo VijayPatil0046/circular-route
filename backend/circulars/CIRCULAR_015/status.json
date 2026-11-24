@@ -7,7 +7,7 @@
   "current_state": "COMPLETED",
   "created_at": "2026-11-22T01:02:14.407017",
   "upload_received_at": "2026-11-21T19:32:14.397016+00:00",
-  "updated_at": "2026-11-22T01:03:31.886688",
+  "updated_at": "2026-11-24T21:59:31.948017",
   "error_message": "Requires manual verification of faculty recipients or To/Copy To sections.",
   "summary": "Ramaiah Institute of Technology mandates an Annual Laboratory Stock Verification and Equipment Calibration Drive for the 2026\u201327 financial year, requiring all Laboratory In-Charge faculty and technical instructors to complete physical asset inspections between 16.11.2026 and 30.11.2026. The process involves verifying capital assets, precision instruments, and IT equipment against the Central Asset Register, with specific documentation deadlines ranging from 23.11.2026 to 30.11.2026. Additionally, a Safety Sub-Committee will conduct statutory compliance audits for fire safety, first-aid readiness, and electrical safety during the same period.",
   "has_extracted_text": true,
@@ -18,8 +18,8 @@
   "emails_failed_count": 0,
   "recipient_identification_completed_at": "2026-11-21T19:33:15.647147+00:00",
   "upload_to_recipient_identification_seconds": 61.25,
-  "email_routing_attempts": 2,
-  "email_routing_started_at": "2026-11-21T19:33:31.828689+00:00",
+  "email_routing_attempts": 4,
+  "email_routing_started_at": "2026-11-24T16:29:31.859273+00:00",
   "email_routing_runs": [
     {
       "attempt": 1,
@@ -42,10 +42,32 @@
       "recipient_count": 5,
       "sent_count": 5,
       "failed_count": 0
+    },
+    {
+      "attempt": 3,
+      "started_at": "2026-11-24T16:29:05.475810+00:00",
+      "completed_at": "2026-11-24T16:29:07.113262+00:00",
+      "dispatch_duration_seconds": 1.637,
+      "upload_to_completion_seconds": 248212.716,
+      "outcome": "COMPLETED",
+      "recipient_count": 5,
+      "sent_count": 5,
+      "failed_count": 0
+    },
+    {
+      "attempt": 4,
+      "started_at": "2026-11-24T16:29:31.859273+00:00",
+      "completed_at": "2026-11-24T16:29:31.932227+00:00",
+      "dispatch_duration_seconds": 0.073,
+      "upload_to_completion_seconds": 248237.535,
+      "outcome": "COMPLETED",
+      "recipient_count": 5,
+      "sent_count": 5,
+      "failed_count": 0
     }
   ],
-  "email_routing_completed_at": "2026-11-21T19:33:31.876689+00:00",
-  "email_routing_duration_seconds": 0.048,
-  "upload_to_email_routing_seconds": 77.48,
+  "email_routing_completed_at": "2026-11-24T16:29:31.932227+00:00",
+  "email_routing_duration_seconds": 0.073,
+  "upload_to_email_routing_seconds": 248237.535,
   "upload_to_first_email_routing_seconds": 73.109
 }
